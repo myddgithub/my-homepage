@@ -11,7 +11,6 @@
 | 入口 | 说明 |
 |------|------|
 | [soundspace.club](https://soundspace.club/) | 本仓库静态主页 |
-| [topics.soundspace.club](https://topics.soundspace.club/) | **ToPics 在线**（韵律出图 Web；需访问令牌） |
 | [GitHub @myddgithub](https://github.com/myddgithub) | 代码与项目 |
 
 ---
@@ -20,7 +19,7 @@
 
 ```
 my-homepage/
-├── index.html          # 主页（头像、简介、链接、ToPics 入口）
+├── index.html          # 主页（头像、简介、链接、ToPics 桌面版下载）
 ├── myphoto.jpeg        # 头像
 ├── ToPics.7z.001–004   # 桌面版 ToPics 分卷下载（7-Zip 合并）
 ├── LICENSE
@@ -45,14 +44,6 @@ my-homepage/
 源码与打包说明另见：
 
 - 桌面：**[myddgithub/ToPics](https://github.com/myddgithub/ToPics)**  
-- Web：**[myddgithub/topics-web](https://github.com/myddgithub/topics-web)**
-
-### ToPics 在线
-
-主页上的 **「打开 topics.soundspace.club」** 指向 Web 版韵律出图（波形 / 语图 / 共振峰 / 音高 / TextGrid）。
-
-- 需要 **访问令牌**（`TOPICS_ACCESS_TOKEN`）  
-- 服务通常由 NAS/本机经 **Cloudflare Tunnel** 对外提供  
 
 ---
 
