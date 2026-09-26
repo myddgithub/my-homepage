@@ -6,6 +6,13 @@
   <meta name="author" content="陈玉东">
   <meta name="description" content="陈玉东的个人学术主页：实验语音学、普通话语音教学、AI 与多模态语料研究。">
   <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#071019">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="陈玉东 · 语音、AI 与语料研究">
+  <meta property="og:description" content="中国传媒大学陈玉东的学术简历、研究平台与语音研究工具。">
+  <meta property="og:url" content="https://soundspace.club/">
+  <meta property="og:image" content="https://soundspace.club/myphoto.jpeg">
   <link rel="canonical" href="https://soundspace.club/">
   <link rel="sitemap" type="application/xml" href="https://soundspace.club/sitemap.xml">
   <title>陈玉东 · Speech / AI / Corpus</title>
@@ -38,31 +45,426 @@
   }
   </script>
   <style>
-    :root{--bg:#071019;--panel:rgba(13,29,42,.78);--line:rgba(142,197,214,.18);--text:#eaf4f5;--muted:#91aeb5;--cyan:#67e8f9;--mint:#8df7d1;--shadow:0 24px 80px rgba(0,0,0,.28)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:var(--bg);font-family:Inter,"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
-    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.38;background-image:linear-gradient(rgba(103,232,249,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,249,.045) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 76%)}
-    a{color:inherit;text-decoration:none}.shell{width:min(1160px,calc(100% - 40px));margin:0 auto}.topbar{position:fixed;inset:0 0 auto;z-index:10;border-bottom:1px solid var(--line);background:rgba(7,16,25,.82);backdrop-filter:blur(18px)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.03em}.brand-mark{width:43px;height:32px;display:inline-flex;align-items:center;justify-content:center;color:var(--mint);filter:drop-shadow(0 0 8px rgba(103,232,249,.18))}.brand-mark svg{width:43px;height:32px;display:block;overflow:visible}.brand-mark text{font-family:"HanWangZhuan","FZSeal","FZShuTi","STXinwei","SimSun",serif;font-weight:700;letter-spacing:.08em;fill:#f5fffb;stroke:var(--cyan);stroke-width:.35px;paint-order:stroke fill}.nav-links{display:flex;gap:25px;color:var(--muted);font-size:13px}.nav-links a:hover,.nav-links a.active{color:var(--cyan)}.nav-cta{color:var(--bg);background:var(--mint);padding:7px 13px;border-radius:999px;font-size:12px;font-weight:800}
-    .hero{min-height:720px;display:grid;align-items:center;padding:150px 0 86px;position:relative}.hero::after{content:"";position:absolute;width:510px;height:510px;right:-160px;top:120px;background:radial-gradient(circle,rgba(62,196,214,.2),transparent 66%);filter:blur(5px);pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.eyebrow,.section-kicker{color:var(--cyan);letter-spacing:.16em;font-size:11px;text-transform:uppercase;font-weight:800}h1{font-size:clamp(47px,7vw,88px);line-height:.98;letter-spacing:-.07em;margin:22px 0 24px;max-width:680px}h1 span{color:var(--mint)}.lead{color:#bfd0d4;font-size:18px;max-width:600px;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:31px}.button{display:inline-flex;align-items:center;gap:8px;padding:12px 17px;border:1px solid var(--line);border-radius:9px;font-size:13px;font-weight:700;transition:transform .2s,border-color .2s,background .2s}.button:hover{transform:translateY(-3px);border-color:var(--cyan);background:rgba(103,232,249,.08)}.button.primary{color:#061319;background:var(--mint);border-color:var(--mint)}.hero-note{color:var(--muted);font-size:12px;margin-top:24px}
-    .portrait-wrap{position:relative;justify-self:end;width:min(360px,100%);padding:20px}.portrait-wrap::before,.portrait-wrap::after{content:"";position:absolute;border:1px solid var(--cyan);opacity:.45}.portrait-wrap::before{inset:0 36px 36px 0;border-right:0;border-bottom:0}.portrait-wrap::after{inset:36px 0 0 36px;border-left:0;border-top:0;border-color:var(--mint)}.portrait-card{position:relative;padding:25px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(19,44,56,.88),rgba(8,19,30,.95));box-shadow:var(--shadow)}.portrait-card img{display:block;width:156px;height:188px;object-fit:cover;object-position:center;margin:0 auto 24px;filter:saturate(.72) contrast(1.05);border:1px solid rgba(141,247,209,.55)}.portrait-label{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--muted)}.portrait-label strong{color:var(--text);font-weight:700}.signal{position:absolute;left:-18px;bottom:21px;width:95px;height:28px;opacity:.75;background:repeating-linear-gradient(90deg,var(--cyan) 0 2px,transparent 2px 7px);clip-path:polygon(0 65%,7% 50%,14% 77%,21% 15%,28% 80%,35% 35%,44% 72%,53% 10%,63% 76%,73% 45%,81% 68%,90% 27%,100% 60%,100% 100%,0 100%)}
-    .metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.metric{padding:25px 22px;border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric b{display:block;font-size:27px;color:var(--mint);letter-spacing:-.04em}.metric span{color:var(--muted);font-size:12px}section{padding:96px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}h2{font-size:clamp(31px,4vw,49px);line-height:1.1;letter-spacing:-.06em;margin:11px 0 0}.section-intro{color:var(--muted);max-width:470px;margin:0;font-size:14px}
-    .bio-grid{display:grid;grid-template-columns:.83fr 1.17fr;gap:62px}.bio-copy{color:#c5d5d8;font-size:16px}.bio-copy p{margin-top:0}.quote{border-left:2px solid var(--cyan);margin-top:30px;padding-left:17px;color:var(--mint);font-size:18px}.timeline{display:grid;gap:0}.timeline-item{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}.timeline-item:last-child{border-bottom:1px solid var(--line)}.timeline-year{color:var(--cyan);font:700 12px ui-monospace,SFMono-Regular,Consolas,monospace;padding-top:4px}.timeline h3{margin:0 0 5px;font-size:17px}.timeline p{margin:0;color:var(--muted);font-size:13px}.projects{background:linear-gradient(180deg,transparent,rgba(13,33,44,.48),transparent)}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{min-height:390px;display:flex;flex-direction:column;padding:25px;border:1px solid var(--line);background:var(--panel);transition:transform .25s,border-color .25s,background .25s}.project:hover{transform:translateY(-7px);border-color:rgba(103,232,249,.65);background:rgba(18,45,57,.9)}.project-top{display:flex;justify-content:space-between;color:var(--cyan);font:700 11px ui-monospace,monospace}.project-icon{font-size:24px;color:var(--mint)}.project h3{font-size:24px;letter-spacing:-.04em;margin:33px 0 9px}.project h3 small{display:block;color:var(--muted);font-size:12px;font-weight:500;letter-spacing:0}.project p{color:var(--muted);font-size:13px;margin:0}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-top:27px}.tag{border:1px solid var(--line);border-radius:999px;padding:4px 8px;color:#b4d4d9;font-size:10px}.project-link{display:inline-flex;margin-top:22px;color:var(--cyan);font-size:12px;font-weight:700}
-    .lab-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.lab-item{padding:20px;border:1px solid var(--line);background:rgba(10,25,36,.62);min-height:150px}.lab-item b{display:block;color:var(--text);margin-bottom:7px}.lab-item span{color:var(--muted);font-size:12px}.download{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;border:1px solid var(--line);background:linear-gradient(110deg,rgba(17,46,57,.88),rgba(10,24,35,.8));padding:33px}.download h3{margin:0 0 5px;font-size:22px}.download p{margin:0;color:var(--muted);font-size:13px}footer{border-top:1px solid var(--line);padding:28px 0 45px;color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:18px}.footer-links a:hover{color:var(--cyan)}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
-    .resume-details{background:rgba(8,20,29,.52)}.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.detail-card{border:1px solid var(--line);background:rgba(13,29,42,.7);padding:24px}.detail-card.wide{grid-column:1/-1}.detail-card h3{margin:0 0 15px;font-size:17px;color:var(--mint)}.detail-card p{margin:0;color:var(--muted);font-size:13px}.detail-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}.detail-list li{padding-left:15px;border-left:1px solid rgba(103,232,249,.35);color:#c5d5d8;font-size:13px}.detail-list strong{color:var(--text);font-weight:700}.date-range{white-space:nowrap;display:inline-block}.date-range b{color:var(--cyan);font-weight:700}.paper-list{columns:2;column-gap:30px}.paper-list li{break-inside:avoid;margin-bottom:10px;color:var(--muted);font-size:12px}.paper-list li::marker{color:var(--cyan)}.detail-expand{margin-top:18px;border-top:1px solid var(--line);padding-top:13px}.detail-expand summary{cursor:pointer;color:var(--cyan);font-size:12px;font-weight:700;list-style:none;display:inline-flex;align-items:center;gap:8px}.detail-expand summary::-webkit-details-marker{display:none}.detail-expand summary::before{content:"＋";font-size:16px;line-height:1}.detail-expand[open] summary::before{content:"−"}.paper-extra{margin-top:14px}
-    .tool-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.tool-card{display:flex;flex-direction:column;min-height:275px;padding:23px;border:1px solid var(--line);background:rgba(13,29,42,.72);transition:transform .25s,border-color .25s}.tool-card:hover{transform:translateY(-6px);border-color:rgba(141,247,209,.6)}.tool-card .tool-type{color:var(--cyan);font:700 10px ui-monospace,monospace;letter-spacing:.08em}.tool-card h3{margin:25px 0 9px;font-size:19px}.tool-card p{margin:0;color:var(--muted);font-size:12px}.tool-card .tool-link{margin-top:auto;padding-top:20px;color:var(--mint);font-size:12px;font-weight:700}.tool-card .tool-status{margin-top:12px;color:#8da9af;font-size:10px}.tool-note{margin-top:18px;color:var(--muted);font-size:12px}.tool-note a{color:var(--cyan)}    @media(max-width:820px){.nav-links{display:none}.hero-grid,.bio-grid{grid-template-columns:1fr;gap:45px}.hero{min-height:auto;padding-top:130px}.portrait-wrap{justify-self:start;width:min(350px,100%)}.project-grid{grid-template-columns:1fr}.lab-grid{grid-template-columns:repeat(2,1fr)}.tool-grid{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:1fr}.detail-card.wide{grid-column:auto}.paper-list{columns:1}.tool-grid{grid-template-columns:1fr}.section-head{display:block}.section-intro{margin-top:20px}}@media(max-width:500px){.shell{width:min(100% - 28px,1160px)}.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}.lab-grid{grid-template-columns:1fr}.download{grid-template-columns:1fr;padding:25px}.timeline-item{grid-template-columns:74px 1fr;gap:12px}}
+    :root {
+      --bg:#071019; --panel:rgba(13,29,42,.78); --line:rgba(142,197,214,.22);
+      --text:#eaf4f5; --muted:#a5bdc3; --cyan:#67e8f9; --mint:#8df7d1;
+      --shadow:0 24px 80px rgba(0,0,0,.28);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:96px; }
+    body { margin:0; color:var(--text); background:var(--bg); font-family:Inter,"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif; line-height:1.8; overflow-wrap:break-word; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:-1; opacity:.38; background-image:linear-gradient(rgba(103,232,249,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,249,.045) 1px,transparent 1px); background-size:44px 44px; mask-image:linear-gradient(to bottom,#000,transparent 76%); }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible, summary:focus-visible { outline:3px solid var(--cyan); outline-offset:5px; border-radius:3px; }
+    .shell { width:min(1160px,calc(100% - 48px)); margin:0 auto; }
+    .skip-link { position:fixed; top:8px; left:12px; z-index:30; padding:10px 16px; color:var(--bg); background:var(--mint); transform:translateY(-160%); }
+    .skip-link:focus { transform:none; }
+    .topbar { position:fixed; inset:0 0 auto; z-index:10; border-bottom:1px solid var(--line); background:rgba(7,16,25,.95); backdrop-filter:blur(18px); }
+    .nav { height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.03em; white-space:nowrap; }
+    .brand-mark { width:43px; height:32px; display:inline-flex; flex-shrink:0; filter:drop-shadow(0 0 8px rgba(103,232,249,.18)); }
+    .brand-mark svg { width:43px; height:32px; display:block; }
+    .nav-links { display:flex; gap:22px; color:var(--muted); font-size:14px; }
+    .nav-links a { padding:10px 0; white-space:nowrap; }
+    .nav-links a:hover,.nav-links a.active { color:var(--cyan); }
+    .nav-cta { color:var(--bg); background:var(--mint); padding:9px 16px; border-radius:999px; font-size:14px; font-weight:800; white-space:nowrap; }
+    .mobile-menu { display:none; }
+    .hero { min-height:660px; display:grid; align-items:center; padding:132px 0 68px; position:relative; isolation:isolate; }
+    .hero::after { content:""; position:absolute; width:min(500px,100%); height:500px; right:0; top:100px; z-index:-1; background:radial-gradient(circle,rgba(62,196,214,.18),transparent 66%); pointer-events:none; }
+    .hero-grid { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr); gap:48px; align-items:center; }
+    .eyebrow,.section-kicker { color:var(--cyan); letter-spacing:.13em; font-size:12px; text-transform:uppercase; font-weight:800; }
+    h1 { font-size:clamp(36px,5.1vw,66px); line-height:1.18; letter-spacing:-.045em; margin:20px 0 24px; }
+    h1 span { color:var(--mint); white-space:nowrap; }
+    .hero-identity { font-size:23px; font-weight:700; margin:0 0 12px; }
+    .hero-identity span { color:var(--muted); font-size:15px; font-weight:400; }
+    .lead { color:#c5d5d8; font-size:17px; max-width:600px; margin:0; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:26px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:10px 16px; border:1px solid var(--line); border-radius:9px; font-size:14px; font-weight:700; transition:transform .2s,border-color .2s,background .2s; }
+    .button:hover { transform:translateY(-2px); border-color:var(--cyan); background:rgba(103,232,249,.08); }
+    .button.primary { color:#061319; background:var(--mint); border-color:var(--mint); }
+    .hero-note { color:var(--muted); font-size:13px; margin-top:20px; }
+    .portrait-wrap { position:relative; justify-self:end; width:min(340px,100%); padding:16px; }
+    .portrait-wrap::before,.portrait-wrap::after { content:""; position:absolute; border:1px solid var(--cyan); opacity:.45; pointer-events:none; }
+    .portrait-wrap::before { inset:0 30px 30px 0; border-right:0; border-bottom:0; }
+    .portrait-wrap::after { inset:30px 0 0 30px; border-left:0; border-top:0; border-color:var(--mint); }
+    .portrait-card { position:relative; padding:24px; border:1px solid var(--line); background:linear-gradient(145deg,rgba(19,44,56,.88),rgba(8,19,30,.95)); box-shadow:var(--shadow); }
+    .portrait-card img { display:block; width:156px; height:188px; object-fit:cover; object-position:center; margin:0 auto 22px; filter:saturate(.72) contrast(1.05); border:1px solid rgba(141,247,209,.55); }
+    .portrait-label { display:flex; flex-wrap:wrap; gap:6px 12px; justify-content:space-between; border-top:1px solid var(--line); padding-top:12px; font-size:12px; color:var(--muted); }
+    .portrait-label strong { color:var(--text); font-weight:700; }
+    .signal { position:absolute; left:0; bottom:18px; width:72px; height:24px; opacity:.65; background:repeating-linear-gradient(90deg,var(--cyan) 0 2px,transparent 2px 7px); clip-path:polygon(0 65%,7% 50%,14% 77%,21% 15%,28% 80%,35% 35%,44% 72%,53% 10%,63% 76%,73% 45%,81% 68%,90% 27%,100% 60%,100% 100%,0 100%); }
+    .metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .metric { padding:22px; border-right:1px solid var(--line); }
+    .metric:last-child { border-right:0; }
+    .metric b { display:block; font-size:27px; color:var(--mint); }
+    .metric span { color:var(--muted); font-size:14px; }
+    section { padding:72px 0; }
+    .section-head { display:flex; justify-content:space-between; gap:36px; align-items:end; margin-bottom:32px; }
+    h2 { font-size:clamp(28px,3.5vw,42px); line-height:1.3; letter-spacing:-.025em; margin:9px 0 0; }
+    .section-intro { color:var(--muted); max-width:470px; margin:0; font-size:16px; }
+    .bio-grid { display:grid; grid-template-columns:1fr 1.1fr; gap:48px; }
+    .bio-copy { color:#c5d5d8; font-size:16px; }
+    .bio-copy p { margin-top:0; }
+    .quote { border-left:2px solid var(--cyan); margin-top:24px; padding-left:16px; color:var(--mint); font-size:17px; }
+    .timeline { display:grid; }
+    .timeline-item { display:grid; grid-template-columns:105px 1fr; gap:18px; padding:18px 0; border-top:1px solid var(--line); }
+    .timeline-item:last-child { border-bottom:1px solid var(--line); }
+    .timeline-year { color:var(--cyan); font:700 13px/1.8 ui-monospace,Consolas,monospace; padding-top:3px; }
+    .timeline h3 { margin:0 0 6px; font-size:17px; }
+    .timeline p { margin:0; color:var(--muted); font-size:15px; }
+    .projects { background:linear-gradient(180deg,transparent,rgba(13,33,44,.48),transparent); }
+    .project-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .project { display:flex; flex-direction:column; padding:26px; border:1px solid var(--line); background:var(--panel); }
+    .project-top { display:flex; justify-content:space-between; align-items:center; color:var(--cyan); font:700 12px ui-monospace,monospace; }
+    .project-icon { font-size:25px; color:var(--mint); }
+    .project h3 { font-size:24px; line-height:1.4; margin:25px 0 16px; }
+    .project h3 small { display:block; color:var(--muted); font-size:14px; font-weight:400; margin-top:6px; }
+    .project p { color:var(--muted); font-size:15px; margin:0; }
+    .tags { display:flex; gap:7px; flex-wrap:wrap; margin-top:auto; padding-top:22px; }
+    .tag { border:1px solid var(--line); border-radius:999px; padding:3px 9px; color:#b4d4d9; font-size:12px; }
+    .project .access-note { font-size:13px; margin-top:16px; }
+    .access-note a,.tool-note a,.reference-note a,.citation-link { color:var(--cyan); text-decoration:underline; text-underline-offset:4px; }
+    .project-link { display:inline-flex; align-items:center; min-height:44px; margin-top:12px; color:var(--cyan); font-size:15px; font-weight:700; }
+    .tool-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+    .tool-card { display:flex; flex-direction:column; padding:23px; border:1px solid var(--line); background:var(--panel); }
+    .tool-type { color:var(--cyan); font:700 12px/1.6 ui-monospace,monospace; letter-spacing:.04em; }
+    .tool-card h3 { margin:22px 0 12px; font-size:21px; line-height:1.4; }
+    .tool-card p { margin:0; color:var(--muted); font-size:15px; }
+    .tool-status { margin-top:auto; padding-top:20px; color:#b4c8cd; font-size:13px; }
+    .tool-link { display:inline-flex; align-items:center; min-height:44px; margin-top:10px; color:var(--mint); font-size:14px; font-weight:700; }
+    .tool-note { margin-top:20px; color:var(--muted); font-size:14px; }
+    .resume-details { background:rgba(8,20,29,.52); }
+    .detail-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .detail-card { border:1px solid var(--line); background:var(--panel); padding:26px; }
+    .detail-card.wide { grid-column:1/-1; }
+    .detail-card h3 { margin:0 0 16px; font-size:19px; color:var(--mint); }
+    .detail-card p { margin:0; color:var(--muted); font-size:15px; }
+    .detail-list { display:grid; gap:14px; margin:0; padding:0; list-style:none; }
+    .detail-list li { padding-left:14px; border-left:1px solid rgba(103,232,249,.35); color:#c5d5d8; font-size:15px; }
+    .detail-list strong { color:var(--text); font-weight:600; }
+    .date-range { white-space:nowrap; display:inline-block; }
+    .date-range b { color:var(--cyan); font-weight:700; }
+    .paper-list { columns:2; column-gap:36px; padding-left:22px; margin:16px 0 0; }
+    .paper-list li { break-inside:avoid; margin-bottom:15px; color:#bdcfd4; font-size:15px; }
+    .paper-list li::marker { color:var(--cyan); }
+    .detail-card .reference-note { font-size:14px; }
+    .citation-link { display:inline-block; font-size:14px; margin-left:4px; }
+    .detail-expand { margin-top:20px; border-top:1px solid var(--line); padding-top:8px; }
+    .detail-expand summary { cursor:pointer; color:var(--cyan); font-size:15px; font-weight:700; list-style:none; display:flex; align-items:center; gap:8px; min-height:44px; width:fit-content; padding:4px 8px 4px 0; }
+    .detail-expand summary::-webkit-details-marker { display:none; }
+    .detail-expand summary::before { content:"＋"; font-size:20px; line-height:1; }
+    .detail-expand[open] summary::before { content:"−"; }
+    .detail-expand > ul { margin-top:16px; }
+    .lab-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+    .lab-item { padding:22px; border:1px solid var(--line); background:rgba(10,25,36,.62); }
+    .lab-item b { display:block; margin-bottom:10px; font-size:17px; }
+    .lab-item span { color:var(--muted); font-size:15px; }
+    .download { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:30px; align-items:center; border:1px solid var(--line); background:linear-gradient(110deg,rgba(17,46,57,.88),rgba(10,24,35,.8)); padding:32px; }
+    .download h2 { margin:0 0 12px; font-size:28px; }
+    .download p { margin:0; color:var(--muted); font-size:15px; }
+    .download .hero-actions { flex-direction:column; align-items:flex-start; margin:0; }
+    .contact-address { color:var(--cyan); font-size:15px; }
+    footer { border-top:1px solid var(--line); padding:26px 0 36px; color:var(--muted); font-size:13px; }
+    .footer-row,.footer-links { display:flex; gap:20px; flex-wrap:wrap; align-items:center; }
+    .footer-row { justify-content:space-between; }
+    .footer-links a { padding:8px 0; }
+    .footer-links a:hover { color:var(--cyan); }
+    /* Content remains visible even if JavaScript or an animation is unavailable. */
+    .reveal.visible { animation:reveal-in .45s ease-out both; }
+    @keyframes reveal-in { from { opacity:.7; transform:translateY(10px); } to { opacity:1; transform:none; } }
+    @media (max-width:1100px) {
+      .tool-grid,.lab-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .nav-links { gap:14px; }
+      .nav { gap:14px; }
+      .project { padding:22px; }
+    }
+    @media (max-width:960px) {
+      .nav-links { display:none; }
+      .mobile-menu { display:block; margin-left:auto; }
+      .mobile-menu summary { cursor:pointer; list-style:none; min-height:44px; padding:10px 12px; border:1px solid var(--line); border-radius:8px; color:var(--cyan); font-size:14px; }
+      .mobile-menu summary::-webkit-details-marker { display:none; }
+      .mobile-links { position:absolute; top:75px; left:0; right:0; padding:16px 24px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; background:#0d1d2a; border-bottom:1px solid var(--line); box-shadow:var(--shadow); }
+      .mobile-links a { padding:10px 14px; border-radius:6px; font-size:15px; }
+      .mobile-links a:hover { background:rgba(103,232,249,.1); color:var(--cyan); }
+      .project-grid { grid-template-columns:1fr; }
+      .project h3 { margin-top:16px; }
+      .bio-grid { gap:30px; }
+    }
+    @media (max-width:820px) {
+      .hero { min-height:auto; padding:116px 0 48px; }
+      .hero-grid,.bio-grid { grid-template-columns:1fr; gap:32px; }
+      h1 { font-size:clamp(32px,8vw,58px); }
+      .portrait-wrap { justify-self:start; width:min(300px,100%); padding:12px; }
+      .portrait-card { padding:20px; }
+      .portrait-card img { margin-bottom:16px; }
+      section { padding:48px 0; }
+      .section-head { display:block; margin-bottom:26px; }
+      .section-intro { margin-top:16px; max-width:none; }
+      .detail-grid { grid-template-columns:1fr; }
+      .paper-list { columns:1; }
+      .download { grid-template-columns:1fr; gap:22px; }
+      .download .hero-actions { flex-direction:row; align-items:center; }
+    }
+    @media (max-width:540px) {
+      .shell { width:calc(100% - 32px); }
+      .nav { gap:8px; height:68px; }
+      .brand { font-size:13px; gap:7px; }
+      .brand-mark,.brand-mark svg { width:32px; height:28px; }
+      .nav-cta { font-size:13px; padding:9px 11px; }
+      .mobile-menu summary { font-size:13px; padding:10px; }
+      .mobile-links { top:67px; padding:12px 16px; }
+      html { scroll-padding-top:84px; }
+      h1 { font-size:clamp(30px,10vw,44px); }
+      .hero { padding-top:100px; }
+      .hero-identity { font-size:22px; }
+      .hero-identity span { font-size:14px; }
+      .lead { font-size:16px; }
+      .hero-actions { gap:10px; }
+      .button { font-size:14px; padding:10px 13px; }
+      .metrics { grid-template-columns:1fr; }
+      .metric { display:flex; gap:18px; align-items:center; border-right:0; border-bottom:1px solid var(--line); padding:14px 0; }
+      .metric:last-child { border-bottom:0; }
+      .metric b { min-width:98px; font-size:24px; }
+      .metric span { font-size:13px; }
+      .tool-grid,.lab-grid { grid-template-columns:1fr; }
+      .timeline-item { grid-template-columns:90px minmax(0,1fr); gap:12px; }
+      .timeline-year { font-size:12px; }
+      .detail-card,.tool-card,.project,.download { padding:22px; }
+      .paper-list { padding-left:19px; }
+      .date-range { font-size:14px; }
+    }
+    @media (max-width:360px) {
+      .brand > span:last-child { font-size:11px; letter-spacing:0; }
+      .nav-cta { padding:9px; }
+      .nav { gap:6px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { animation:none !important; transition:none !important; }
+    }
   </style>
 </head>
 <body>
-  <header class="topbar"><nav class="nav shell" aria-label="主导航"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 32" role="img"><path d="M6 5h28l6 6v17H10l-6-6V10z" fill="none" stroke="#d85b54" stroke-width="1.3"/><g fill="none" stroke="#f5fffb" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9v15c0 2 1 4 3 5M10 14h6M10 19h6M11 27c2 1 4 1 6 0"/><path d="M20 10h15M28 8v18M20 16h15M21 16l13 10M34 16L21 26"/></g><path d="M8 25c6-3 9 1 14-1s8 1 13-2" fill="none" stroke="#e87568" stroke-width="1.05" stroke-linecap="round"/><circle cx="37" cy="7" r="1.35" fill="var(--cyan)"/></svg></span><span>CHEN YUDONG</span></a><div class="nav-links"><a href="#about">关于</a><a href="#resume">简历</a><a href="#projects">项目</a><a href="#tools">工具</a><a href="#lab">实验室</a><a href="#contact">联系</a></div><a class="nav-cta" href="mailto:chenyd@cuc.edu.cn">CONTACT ↗</a></nav></header>
-  <main id="top">
-<section class="hero shell"><div class="hero-grid"><div class="reveal"><div class="eyebrow">Speech · AI · Corpus / 2026</div><h1>把声音变成<br><span>可研究的空间。</span></h1><p class="lead">陈玉东，教授、博士生导师、国家级普通话水平测试员。主要研究语音语调、韵律互动、汉语教学与艺术发声，并持续把这些知识转化为可操作的 AI 工具与研究平台。</p><div class="hero-actions"><a class="button primary" href="#projects">查看研究项目 <span>↓</span></a><a class="button" href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub ↗</a></div><div class="hero-note">中国传媒大学人文学院 · 北京</div></div><div class="portrait-wrap reveal"><div class="portrait-card"><img src="myphoto.jpeg" alt="陈玉东照片"><div class="portrait-label"><span>FIELD NOTE / 01</span><strong>音声 · 语言 · 计算</strong></div></div><span class="signal" aria-hidden="true"></span></div></div></section>
-    <div class="metrics shell reveal"><div class="metric"><b>30+</b><span>期刊与会议论文</span></div><div class="metric"><b>2 部</b><span>学术专著</span></div><div class="metric"><b>1992—</b><span>持续从事语音与语言教学研究</span></div></div>
-    <section id="about" class="shell"><div class="section-head reveal"><div><div class="section-kicker">01 / Profile</div><h2>研究者，也是<br>工具的打造者。</h2></div><p class="section-intro">从北京大学实验语音学博士，到中国传媒大学教授；从韵律研究与语言教学，到 AI 语音实验与多模态语料基础设施。</p></div><div class="bio-grid"><div class="bio-copy reveal"><p>我的研究专长包括实验语音学、互动语言学、言语韵律、汉语教学和艺术发声学。曾在中国科学院心理研究所从事博士后研究，并任塞尔维亚贝尔格莱德孔子学院中方院长。</p><p>长期讲授汉语语音学、AI 语音教学与研究、汉语韵律研究、语言学研究方法、传媒语言研究、普通话口语训练和口语正音等课程。</p><p>已出版《汉语语篇的重音层级研究》《传媒有声语言实验研究》等专著，主编 / 参编《趣味汉语语音课本》，并在《中国语文》《当代语言学》《汉语学报》《语言科学》《声学学报》等刊物发表论文 30 余篇。</p><div class="quote">“AI 助力，争分夺秒，让妄想日渐成真。”</div></div><div class="timeline reveal"><div class="timeline-item"><div class="timeline-year">1988—2004</div><div><h3>主要学习经历</h3><p>河南大学汉语言文学学士；中国传媒大学播音学院语言学及应用语言学硕士；北京大学中文系语言学及应用语言学博士，实验语音学方向。</p></div></div><div class="timeline-item"><div class="timeline-year">1992—至今</div><div><h3>主要工作经历</h3><p>历任商丘师范学院、中国传媒大学讲师 / 副教授，曾任贝尔格莱德孔子学院中方院长；2018 年起任中国传媒大学人文学院教授。</p></div></div><div class="timeline-item"><div class="timeline-year">2024—2027</div><div><h3>当前研究项目</h3><p>主持国家社科基金一般项目“互动视域下语体驱动的汉语韵律表达研究”（24BYY039），并持续建设 AI 语音教学与 SoundSpace 语料研究平台。</p></div></div></div></div></section>
-    <section id="resume" class="resume-details"><div class="shell"><div class="section-head reveal"><div><div class="section-kicker">02 / Curriculum vitae</div><h2>详细简历，<br>研究与教学的轨迹。</h2></div><p class="section-intro">以下内容严格依据 2026 年 10 月 Word 简历整理，完整呈现学术经历、教学方向、成果与科研项目。</p></div><div class="detail-grid"><article class="detail-card reveal"><h3>教育经历</h3><ul class="detail-list"><li><strong>2001—2004 · 北京大学中文系</strong><br>语言学及应用语言学专业，实验语音学方向，获博士学位。</li><li><strong>1998—2001 · 中国传媒大学播音学院</strong><br>语言学及应用语言学专业，获硕士学位。</li><li><strong>1988—1992 · 河南大学中文系</strong><br>汉语言文学专业，获学士学位。</li></ul></article><article class="detail-card reveal"><h3>工作经历</h3><ul class="detail-list"><li><strong><span class="date-range">2018.12 <b>—</b> 至今</span> · 中国传媒大学人文学院 · 教授</strong></li><li><strong><span class="date-range">2010.03 <b>—</b> 2012.08</span> · 贝尔格莱德孔子学院 · 中方院长</strong></li><li><strong><span class="date-range">2007.07 <b>—</b> 2018.12</span> · 中国传媒大学对外汉语教育学院、人文学院 · 副教授</strong></li><li><strong><span class="date-range">2007.05 <b>—</b> 2009.06</span> · 中国科学院心理研究所 · 博士后</strong></li><li><strong><span class="date-range">2001.07 <b>—</b> 2007.06</span> · 中国传媒大学播音主持艺术学院 · 讲师、副教授</strong></li><li><strong><span class="date-range">1992.07 <b>—</b> 1998.08</span> · 河南商丘师范学院 · 助教</strong></li></ul></article><article class="detail-card reveal"><h3>教学与研究领域</h3><p>实验语音学；互动语言学；言语韵律；汉语教学；艺术发声学。</p><h3 style="margin-top:22px">主要讲授课程</h3><p>汉语语音学（硕士生）；AI 语音教学与研究（实验语音学）（硕士生）；汉语韵律研究（硕士生）；语言学研究方法（硕士生）；AI赋能的语言实证研究：理论与实践；传媒语言研究（本科生、硕士生）；普通话口语训练（本科生）；有声语言发声与表达艺术（本科公选课）；口语正音（留学生）；高级听说（留学生）。</p></article><article class="detail-card reveal"><h3>著作与教材</h3><ul class="detail-list"><li>陈玉东 2017《汉语语篇的重音层级研究》，中国传媒大学出版社。</li><li>陈玉东 2006《传媒有声语言实验研究》，中国传媒大学出版社。</li><li>陈玉东等 2010《趣味汉语语音课本》，世界图书出版社。</li><li>陈玉东 2004 传媒有声语言语段的构造与调节，北京大学博士学位论文。</li></ul></article><article class="detail-card wide reveal"><h3>代表性论文</h3><ul class="paper-list"><li>陈玉东 2026 法庭审理中陈述、宣告和宣判的韵律表达，《汉语学报》第3期。</li><li>陈玉东 2024 汉语会话中叹词的语调模式和应答功能——互动视角下的听感实验研究，《语言科学》第3期。</li><li>陈玉东 2023 互动语言中的韵律表达研究综述，《当代语言学》第2期。</li><li>陈玉东、张爱珍 2023 汉语简单应答语的韵律分析——基于对口相声语料的考察，《南开语言学刊》第1期。</li><li>张欣阳、陈玉东 2022 互动视角下陈述疑问句的韵律特征初探，《中国语音学报》第1期。</li></ul><details class="detail-expand"><summary>查看详情</summary><ul class="paper-list paper-extra"><li>陈玉东、段汝丽 2020 评书流水句的韵律表达，《当代修辞学》第1期。</li><li>陈玉东、岳炎炎、崔哲、王博晓、孙鑫主编 2020 反问句的韵律表达及其互动功能，《互动语言学与汉语研究（第三辑）》，北京语言大学出版社。</li><li>陈玉东、吕士楠 2017 从五度标调法到五度值的准确推算，《中国语音学报》第1期。</li><li>陈玉东、任倩楠 2016 带“呢”句子的韵律特征分析，《中国语文》第1期。</li><li>陈玉东、马仁凤主编 2016 谈话节目话轮转换的韵律特征分析———以《鲁豫有约》为例，《互动语言学与汉语研究（第一辑）》，世界图书出版公司。</li><li>陈玉东、吕士楠、杨玉芳 2009 普通话中语段重音对小句声学特征的调节，《声学学报》第4期。</li><li>陈玉东、吕士楠 2008 汉语朗读语篇的修辞结构和韵律表达，《第八届中国语音学学术会议暨庆贺吴宗济先生百岁华诞语音科学前沿问题国际研讨会(PCC2008/ISPF2008)论文集》。 </li><li>陈玉东 2007 无标注语段的韵律特征分析，《语言研究》第1期。</li><li>陈玉东 2006 广播电视传播语言语体特点和风格分析，《现代传播(中国传媒大学学报)》第4期。</li><li>陈玉东 2006 广播电视传播语言语体特点和风格分析，《现代传播(中国传媒大学学报)》第4期。</li><li>陈玉东 2005 小句焦点的韵律结构类型及其变化，《语言学论丛》第31辑。</li><li>陈玉东 2005 普通话上声重音的音高组合方式，《语言科学》第4期。</li><li>陈玉东 2005 汉语韵律层级中小句的中枢地位和调节作用，《汉语学报》第2期。</li><li>陈玉东 2004 传播语言应用中的语段调节，《现代传播》第3期。</li><li>陈玉东 2000 广播电视传播语言的气韵美，《现代传播》第6期。</li></ul></details></article><article class="detail-card wide reveal"><h3>科研项目</h3><ul class="detail-list"><li>国家社科基金一般项目《互动视域下语体驱动的汉语韵律表达研究》（24BYY039），项目负责人，2024年10月-2027年12月。在研。</li><li>国家社科重大项目子项目《自然口语对话中的韵律互动研究》（20ZD295），子项目负责人，2020.12-2025.12。结项。</li><li>国家社会科学基金重点项目《汉语语用标记形成机制的多视角研究》（14AYY015），主要参与人，2014.10-2018.12。完成。</li></ul><details class="detail-expand"><summary>查看详情</summary><ul class="detail-list"><li>国家自然科学基金项目 《面向双语教学的新疆少数民族多层次普通话语音库建设及声学分析》（NSFC61362037），主要参与人，2014.10-2017.12.10。完成。</li><li>国家自然科学基金项目 《汉语语篇中语句焦点和焦点-重音投射》（项目号60775026），参与人，2007.10-2012.12。完成。</li><li>国家语言资源监测与研究中心有声媒体语言分中心项目 《广播电视语言带标语音语料库研究》，项目负责人，2006.11-2007.09。完成。</li><li>中国传媒大学“211”二期工程《有声语言语音标注体系研究及语料库开发》（项目号：BBU211-15.3），子项目负责人，2009.09-2012.01。所在总项目获得中国传媒大学“标志性成果奖”。完成。</li><li>中国传媒大学“211”三期工程研究课题《普通话带标语料库及语音样本库研发》，课题负责人。完成。</li></ul></details></article></div></div></section>
-    <section id="projects" class="projects"><div class="shell"><div class="section-head reveal"><div><div class="section-kicker">03 / Selected work</div><h2>三个入口，<br>同一条研究链。</h2></div><p class="section-intro">从基础概念的教学动画，到 AI 语音教学，再到面向长期研究的语料平台。</p></div><div class="project-grid"><article class="project reveal"><div class="project-top"><span>01 / LAB</span><span class="project-icon">∿</span></div><h3>Speech Lab<small>实验语音学交互实验室</small></h3><p>一组浏览器端教学与研究实验：声波、元音、声母、声调、语调、发声、呼吸、共鸣与音乐声学。另有 Intonation Lab，可导入音频、编辑 F0、标注音节并重合成试听。</p><div class="tags"><span class="tag">Web Audio</span><span class="tag">F0 / Praat</span><span class="tag">Bilingual</span></div><a class="project-link" href="https://github.com/myddgithub/speech-lab" target="_blank" rel="noreferrer">GitHub 项目 ↗</a></article><article class="project reveal"><div class="project-top"><span>02 / TEACHING</span><span class="project-icon">◌</span></div><h3>AI Chinese Teach<small>AI 中文语音教学系统</small></h3><p>面向学生、教师与管理员的全栈教学平台：任务、示范音、录音 / 上传、音素与声调评分、流利度反馈、批量评测，以及 TextGrid 编辑与 ToPics 绘图。</p><div class="tags"><span class="tag">ASR</span><span class="tag">语音评分</span><span class="tag">FastAPI</span></div><a class="project-link" href="https://ai.soundspace.club" target="_blank" rel="noreferrer">打开云平台 ↗</a></article><article class="project reveal"><div class="project-top"><span>03 / CORPUS</span><span class="project-icon">⌁</span></div><h3>SoundSpace<small>多模态语料与韵律研究平台</small></h3><p>语料研究的长期基础设施：规则、拼音与声调检索，语料浏览，TextGrid 在线编辑与发布，三模态导出，声学特征、统计、入库、权限与处理谱系。</p><div class="tags"><span class="tag">Corpus</span><span class="tag">TextGrid</span><span class="tag">Provenance</span></div><a class="project-link" href="http://192.168.1.2:8000/" target="_blank" rel="noreferrer">打开 NAS 平台 ↗</a></article></div></div></section>
-<section id="tools" class="shell"><div class="section-head reveal"><div><div class="section-kicker">04 / Toolchain</div><h2>把研究流程，<br>变成可复用的工具。</h2></div><p class="section-intro">从语音转写、JSON 转 TextGrid，到音视频处理和韵律画图，工具链覆盖研究资料进入平台前后的关键步骤。</p></div><div class="tool-grid"><article class="tool-card reveal"><div class="tool-type">ONLINE · ASR / ALIGNMENT</div><h3>WhisperX-Me</h3><p>WhisperX 词级转写、中文强制对齐与时间轴处理，适合把音视频素材加工成可编辑的语音数据。</p><div class="tool-status">WhisperX-Me-Web · 在线服务</div><a class="tool-link" href="https://tg.soundspace.club/" target="_blank" rel="noreferrer">打开在线工具 ↗</a></article><article class="tool-card reveal"><div class="tool-type">JSON → TEXTGRID</div><h3>Json2TG</h3><p>将 WhisperX JSON 转换为 TextGrid，并支持 Normalize、Timing、Repair、拼音层和说话人层等处理步骤。</p><div class="tool-status">Json2TG Web · 在线服务</div><a class="tool-link" href="https://json2tg.soundspace.club/" target="_blank" rel="noreferrer">打开在线工具 ↗</a></article><article class="tool-card reveal"><div class="tool-type">TOPICS · PROSODY PLOT</div><h3>ToPics 韵律画图</h3><p>上传音频及 TextGrid，调整参数后生成波形、语图、音高、强度、共振峰和标注层的多面板韵律图。</p><div class="tool-status">ToPics Web · 在线服务</div><a class="tool-link" href="https://topics.soundspace.club/" target="_blank" rel="noreferrer">打开在线工具 ↗</a></article><article class="tool-card reveal"><div class="project-top"><span>MEDIA TOOLS</span><span class="project-icon">▣</span></div><h3>音视频转换与剪辑</h3><p>面向研究素材的格式转换、切分、合并、抽取和批处理，为转写、标注与语料入库准备统一媒体文件。</p><div class="tool-status">源码公开 · NAS / 本地部署</div><a class="tool-link" href="https://github.com/myddgithub/media-workbench-web" target="_blank" rel="noreferrer">查看公开仓库 ↗</a></article></div><p class="tool-note">更多脚本与研究工具见 <a href="https://github.com/myddgithub/mypy" target="_blank" rel="noreferrer">myddgithub/mypy</a>：TextGrid 处理、语音识别对齐、声学特征提取、音视频转换、Excel / JSON 整理等。</p></div></section>
-    <section id="lab" class="shell"><div class="section-head reveal"><div><div class="section-kicker">05 / Lab index</div><h2>把复杂的声音，<br>拆成可以探索的模块。</h2></div><p class="section-intro">Speech Lab 的核心内容覆盖从气流与发声，到声学、韵律和音乐听觉的连续谱。</p></div><div class="lab-grid"><div class="lab-item reveal"><b>语音基础</b><span>声波 · 频谱 · 语图 · 清浊 · 气流</span></div><div class="lab-item reveal"><b>发音与共鸣</b><span>元音 · 声母 · 韵母 · 口腔 / 胸腔 / 头腔共鸣</span></div><div class="lab-item reveal"><b>韵律与声调</b><span>声调 · 语调 · 重音 · F0 曲线编辑 · TextGrid</span></div><div class="lab-item reveal"><b>声音与音乐</b><span>纯音与复合音 · 谐波 · 律制 · 中国五声调式</span></div></div></section>
-    <section id="contact" class="shell"><div class="download reveal"><div><h3>继续阅读，或直接联系我。</h3><p>项目源码、实验材料与平台入口持续更新中；如果你对语音教学、声学分析或语料研究感兴趣，欢迎交流。</p></div><div class="hero-actions"><a class="button primary" href="mailto:chenyd@cuc.edu.cn">发送邮件 ↗</a></div></div></section>
-  </main><footer><div class="shell footer-row"><span>© 2026 陈玉东 / SoundSpace</span><div class="footer-links"><a href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:chenyd@cuc.edu.cn">Email</a><a href="#top">Back to top ↑</a></div></div></footer>
-  <script>const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));const links=[...document.querySelectorAll('.nav-links a')],sections=links.map(link=>document.querySelector(link.getAttribute('href'))),navObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id))}),{rootMargin:'-35% 0px -55% 0px'});sections.forEach(section=>section&&navObserver.observe(section));</script>
+  <a class="skip-link" href="#top">跳至主要内容</a>
+  <header class="topbar">
+<nav class="nav shell" aria-label="主导航"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 32" role="img"><path d="M6 5h28l6 6v17H10l-6-6V10z" fill="none" stroke="#d85b54" stroke-width="1.3"/><g fill="none" stroke="#f5fffb" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9v15c0 2 1 4 3 5M10 14h6M10 19h6M11 27c2 1 4 1 6 0"/><path d="M20 10h15M28 8v18M20 16h15M21 16l13 10M34 16L21 26"/></g><path d="M8 25c6-3 9 1 14-1s8 1 13-2" fill="none" stroke="#e87568" stroke-width="1.05" stroke-linecap="round"/><circle cx="37" cy="7" r="1.35" fill="var(--cyan)"/></svg></span><span>CHEN YUDONG</span></a><div class="nav-links"><a href="#about">关于</a><a href="#projects">研究平台</a><a href="#tools">工具</a><a href="#resume">简历</a><a href="#lab">实验室</a><a href="#contact">联系</a></div>
+<details class="mobile-menu">
+<summary>菜单</summary><div class="mobile-links"><a href="#about">关于</a><a href="#projects">研究平台</a><a href="#tools">工具</a><a href="#resume">简历</a><a href="#lab">实验室</a><a href="#contact">联系</a></div>
+</details><a class="nav-cta" href="mailto:chenyd@cuc.edu.cn">联系我 ↗</a>
+</nav>
+</header>
+  <main id="top" tabindex="-1">
+<section class="hero shell"><div class="hero-grid"><div class="reveal"><div class="eyebrow">Speech · AI · Corpus / 2026</div>
+<h1>把声音变成<br><span>可研究的空间。</span></h1>
+<p class="hero-identity">陈玉东 <span>· 中国传媒大学</span></p>
+<p class="lead">教授、博士生导师、国家级普通话水平测试员。主要研究语音语调、韵律互动、汉语教学与艺术发声，并持续把这些知识转化为可操作的 AI 工具与研究平台。</p><div class="hero-actions"><a class="button primary" href="#tools">使用研究工具 <span>↓</span></a><a class="button" href="#resume">查看学术简历</a><a class="button" href="#projects">探索研究平台</a></div><div class="hero-note">中国传媒大学人文学院 · 北京</div></div><div class="portrait-wrap reveal"><div class="portrait-card"><img src="myphoto.jpeg" alt="陈玉东照片" width="156" height="188" decoding="async"><div class="portrait-label"><span>RESEARCH PROFILE</span><strong>音声 · 语言 · 计算</strong></div></div><span class="signal" aria-hidden="true"></span></div></div>
+</section>
+    <div class="metrics shell reveal"><div class="metric"><b>30+</b><span>学术论文</span></div><div class="metric"><b>2 部</b><span>学术专著</span></div><div class="metric"><b>1992—</b><span>持续从事语音与语言教学研究</span></div></div>
+    <section id="about" class="shell"><div class="section-head reveal"><div><div class="section-kicker">01 / Profile</div>
+<h2>研究方向与简介</h2></div>
+<p class="section-intro">以实验语音学为基础，关注言语韵律与互动，将语言研究与 AI 语音教学、语料分析相结合。</p></div><div class="bio-grid"><div class="bio-copy reveal">
+<p>我的研究专长包括实验语音学、互动语言学、言语韵律、汉语教学和艺术发声学。曾在中国科学院心理研究所从事博士后研究，并任塞尔维亚贝尔格莱德孔子学院中方院长。</p>
+<p>已出版《汉语语篇的重音层级研究》《传媒有声语言实验研究》两部专著，参与编写《趣味汉语语音课本》，发表学术论文 30 余篇。</p><div class="quote">“AI 助力，争分夺秒，让妄想日渐成真。”</div></div><div class="timeline reveal"><div class="timeline-item"><div class="timeline-year">1988—2004</div><div>
+<h3>主要学习经历</h3>
+<p>河南大学汉语言文学学士；北京广播学院（现中国传媒大学）语言学及应用语言学硕士；北京大学中文系语言学及应用语言学博士，实验语音学方向。</p></div></div><div class="timeline-item"><div class="timeline-year">1992—至今</div><div>
+<h3>主要工作经历</h3>
+<p>先后在商丘师范学院、中国传媒大学任教，曾任贝尔格莱德孔子学院中方院长；2018 年起任中国传媒大学人文学院教授。</p></div></div><div class="timeline-item"><div class="timeline-year">2024—2027</div><div>
+<h3>当前研究项目</h3>
+<p>主持国家社科基金一般项目“互动视域下语体驱动的汉语韵律表达研究”（24BYY039），并持续建设 AI 语音教学与 SoundSpace 语料研究平台。</p></div></div></div></div>
+</section>
+    <section id="projects" class="projects"><div class="shell"><div class="section-head reveal"><div><div class="section-kicker">02 / Platforms</div>
+<h2>研究平台</h2></div>
+<p class="section-intro">从基础概念的教学动画，到 AI 语音教学，再到面向长期研究的语料平台。</p></div><div class="project-grid">
+<article class="project reveal"><div class="project-top"><span>01 / LAB</span><span class="project-icon">∿</span></div>
+<h3>Speech Lab<small>实验语音学交互实验室</small></h3>
+<p>一组浏览器端教学与研究实验：声波、元音、声母、声调、语调、发声、呼吸、共鸣与音乐声学。另有 Intonation Lab，可导入音频、编辑 F0、标注音节并重合成试听。</p><div class="tags"><span class="tag">Web Audio</span><span class="tag">F0 / Praat</span><span class="tag">Bilingual</span></div>
+<p class="access-note">公开演示入口暂未提供</p><a class="project-link" href="#lab">查看模块介绍 ↓</a>
+</article>
+<article class="project reveal"><div class="project-top"><span>02 / TEACHING</span><span class="project-icon">◌</span></div>
+<h3>AI Chinese Teach<small>AI 中文语音教学系统</small></h3>
+<p>面向学生、教师与管理员的语音教学平台：任务、示范音、录音 / 上传、音素与声调评分、流利度反馈、批量评测，以及 TextGrid 编辑与 ToPics 绘图。</p><div class="tags"><span class="tag">ASR</span><span class="tag">语音评分</span><span class="tag">FastAPI</span></div>
+<p class="access-note">需登录账号 · <a href="#contact">咨询访问方式</a></p><a class="project-link" href="https://ai.soundspace.club/" target="_blank" rel="noreferrer">打开教学平台 ↗</a>
+</article>
+<article class="project reveal"><div class="project-top"><span>03 / CORPUS</span><span class="project-icon">⌁</span></div>
+<h3>SoundSpace<small>多模态语料与韵律研究平台</small></h3>
+<p>语料研究的长期基础设施：规则、拼音与声调检索，语料浏览，TextGrid 在线编辑与发布，多模态数据导出、声学特征提取与统计，以及数据入库、权限管理和处理记录追踪。</p><div class="tags"><span class="tag">Corpus</span><span class="tag">TextGrid</span><span class="tag">Provenance</span></div>
+<p class="access-note">内网部署 · 访问方式请联系咨询</p><a class="project-link" href="#contact">咨询语料平台 ↗</a>
+</article></div></div>
+</section>
+<section id="tools" class="shell"><div class="section-head reveal"><div><div class="section-kicker">03 / Tools</div>
+<h2>语音研究工具</h2></div>
+<p class="section-intro">从语音转写、JSON 转 TextGrid，到音视频处理和韵律画图，工具链覆盖研究资料进入平台前后的关键步骤。</p></div><div class="tool-grid">
+<article class="tool-card reveal"><div class="tool-type">ASR / ALIGNMENT</div>
+<h3>WhisperX-Me</h3>
+<p>WhisperX 词级转写、中文强制对齐与时间轴处理，适合把音视频素材加工成可编辑的语音数据。</p><div class="tool-status">公开服务入口暂未提供</div><a class="tool-link" href="#contact">咨询转写工具 ↗</a>
+</article>
+<article class="tool-card reveal"><div class="tool-type">JSON → TEXTGRID</div>
+<h3>Json2TG</h3>
+<p>将 WhisperX JSON 转换为 TextGrid，并支持规范化（Normalize）、时间调整（Timing）、修复（Repair），以及拼音层和说话人层处理。</p><div class="tool-status">在线服务 · 需要访问凭据</div><a class="tool-link" href="https://json2tg.soundspace.club/" target="_blank" rel="noreferrer">打开 Json2TG ↗</a>
+</article>
+<article class="tool-card reveal"><div class="tool-type">TOPICS · PROSODY PLOT</div>
+<h3>ToPics 韵律画图</h3>
+<p>上传音频及 TextGrid，调整参数后生成波形、语图、音高、强度、共振峰和标注层的多面板韵律图。</p><div class="tool-status">在线服务 · 需要访问凭据</div><a class="tool-link" href="https://topics.soundspace.club/" target="_blank" rel="noreferrer">打开 ToPics ↗</a>
+</article>
+<article class="tool-card reveal"><div class="project-top"><span>MEDIA TOOLS</span><span class="project-icon">▣</span></div>
+<h3>音视频转换与剪辑</h3>
+<p>面向研究素材的格式转换、切分、合并、抽取和批处理，为转写、标注与语料入库准备统一媒体文件。</p><div class="tool-status">源码公开 · NAS / 本地部署</div><a class="tool-link" href="https://github.com/myddgithub/media-workbench-web" target="_blank" rel="noreferrer">查看公开仓库 ↗</a>
+</article></div>
+<p class="tool-note">在线服务需相应账号或访问凭据，可<a href="#contact">联系咨询</a>。更多已公开的工具源码见 <a href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub 项目列表 ↗</a>。</p></div>
+</section>
+<section id="resume" class="resume-details"><div class="shell"><div class="section-head reveal"><div><div class="section-kicker">04 / Curriculum vitae</div>
+<h2>学术简历</h2></div>
+<p class="section-intro">教育与任职经历、教学课程、代表性成果和科研项目。</p></div><div class="detail-grid">
+<article class="detail-card reveal">
+<h3>教育经历</h3>
+<ul class="detail-list">
+<li><strong>2001—2004 · 北京大学中文系</strong><br>语言学及应用语言学专业，实验语音学方向，获博士学位。</li>
+<li><strong>1998—2001 · 北京广播学院（现中国传媒大学）</strong><br>语言学及应用语言学专业，获硕士学位。</li>
+<li><strong>1988—1992 · 河南大学中文系</strong><br>汉语言文学专业，获学士学位。</li>
+</ul>
+</article>
+<article class="detail-card reveal">
+<h3>工作经历</h3>
+<ul class="detail-list">
+<li><strong><span class="date-range">2018.12 <b>—</b> 至今</span> · 中国传媒大学人文学院 · 教授</strong></li>
+<li><strong><span class="date-range">2010.03 <b>—</b> 2012.08</span> · 贝尔格莱德孔子学院 · 中方院长</strong></li>
+<li><strong><span class="date-range">2007.07 <b>—</b> 2018.12</span> · 中国传媒大学对外汉语教育学院、人文学院 · 副教授</strong></li>
+<li><strong><span class="date-range">2007.05 <b>—</b> 2009.06</span> · 中国科学院心理研究所 · 博士后</strong></li>
+<li><strong><span class="date-range">2001.07 <b>—</b> 2007.06</span> · 中国传媒大学播音主持艺术学院 · 讲师、副教授</strong></li>
+<li><strong><span class="date-range">1992.07 <b>—</b> 1998.08</span> · 河南商丘师范学院 · 助教</strong></li>
+</ul>
+</article>
+<article class="detail-card reveal">
+<h3>教学与研究领域</h3>
+<p>实验语音学；互动语言学；言语韵律；汉语教学；艺术发声学。</p>
+<h3 style="margin-top:22px">主要讲授课程</h3>
+<p>汉语语音学（硕士生）；AI 语音教学与研究（实验语音学）（硕士生）；汉语韵律研究（硕士生）；语言学研究方法（硕士生）；AI 赋能的语言实证研究：理论与实践；传媒语言研究（本科生、硕士生）；普通话口语训练（本科生）；有声语言发声与表达艺术（本科公选课）；口语正音（留学生）；高级听说（留学生）。</p>
+</article>
+<article class="detail-card reveal">
+<h3>专著、教材与学位论文</h3>
+<ul class="detail-list">
+<li>陈玉东（2017）．《汉语语篇的重音层级研究》，中国传媒大学出版社。</li>
+<li>陈玉东（2006）．《传媒有声语言实验研究》，中国传媒大学出版社。</li>
+<li>陈玉东等（2010）．《趣味汉语语音课本》，世界图书出版社。</li>
+<li>陈玉东（2004）．传媒有声语言语段的构造与调节，北京大学博士学位论文。</li>
+</ul>
+</article>
+<article class="detail-card wide reveal">
+<h3>代表性论文</h3>
+<p class="reference-note">部分代表作亦见<a href="https://zchj.cuc.edu.cn/5254/listm.htm" target="_blank" rel="noreferrer">学校教师介绍 ↗</a>。</p>
+<ul class="paper-list">
+<li>陈玉东（2026）．法庭审理中陈述、宣告和宣判的韵律表达，《汉语学报》第3期。</li>
+<li>陈玉东（2024）．汉语会话中叹词的语调模式和应答功能——互动视角下的听感实验研究，《语言科学》第3期。</li>
+<li>陈玉东（2023）．互动语言中的韵律表达研究综述，《当代语言学》第2期。</li>
+<li>陈玉东、张爱珍（2023）．汉语简单应答语的韵律分析——基于对口相声语料的考察，《南开语言学刊》第1期。</li>
+<li>张欣阳、陈玉东（2022）．互动视角下陈述疑问句的韵律特征初探，《中国语音学报》第1期。</li>
+</ul>
+<details class="detail-expand">
+<summary>查看更多</summary>
+<ul class="paper-list paper-extra">
+<li>陈玉东、段汝丽（2020）．评书流水句的韵律表达，《当代修辞学》第1期。</li>
+<li>陈玉东、岳炎炎、崔哲、王博晓、孙鑫（2020）．反问句的韵律表达及其互动特征，《互动语言学与汉语研究（第三辑）》，北京语言大学出版社，286—317 页。<a class="citation-link" href="https://ncpssd.org/journal/details?gch=11119X&amp;langType=1&amp;num=1&amp;years=2020" target="_blank" rel="noreferrer">文献记录 ↗</a></li>
+<li>陈玉东、吕士楠（2017）．从五度标调法到五度值的准确推算，《中国语音学报》第1期。</li>
+<li>陈玉东、任倩楠（2016）．带“呢”句子的韵律特征分析，《中国语文》第1期。</li>
+<li>陈玉东、马仁凤（2016）．谈话节目话轮转换的韵律特征分析——以《鲁豫有约》为例，《互动语言学与汉语研究（第一辑）》，世界图书出版公司。</li>
+<li>陈玉东、吕士楠、杨玉芳（2009）．普通话中语段重音对小句声学特征的调节，《声学学报》第4期。</li>
+<li>陈玉东、吕士楠（2008）．汉语朗读语篇的修辞结构和韵律表达，《第八届中国语音学学术会议暨庆贺吴宗济先生百岁华诞语音科学前沿问题国际研讨会(PCC2008/ISPF2008)论文集》。 </li>
+<li>陈玉东（2007）．无标注语段的韵律特征分析，《语言研究》第1期。</li>
+<li>陈玉东（2006）．广播电视传播语言语体特点和风格分析，《现代传播（中国传媒大学学报）》第4期。</li>
+<li>陈玉东（2005）．小句焦点的韵律结构类型及其变化，《语言学论丛》第31辑。</li>
+<li>陈玉东（2005）．普通话上声重音的音高组合方式，《语言科学》第4期。</li>
+<li>陈玉东（2005）．汉语韵律层级中小句的中枢地位和调节作用，《汉语学报》第2期。</li>
+<li>陈玉东（2004）．传播语言应用中的语段调节，《现代传播》第3期。</li>
+<li>陈玉东（2000）．广播电视传播语言的气韵美，《现代传播》第6期。</li>
+</ul>
+</details>
+</article>
+<article class="detail-card wide reveal">
+<h3>科研项目</h3>
+<ul class="detail-list">
+<li>国家社科基金一般项目《互动视域下语体驱动的汉语韵律表达研究》（24BYY039），项目负责人，2024.10—2027.12。在研。</li>
+<li>国家社科重大项目子项目《自然口语对话中的韵律互动研究》（20ZD295），子项目负责人，2020.12—2025.12。结项。</li>
+<li>国家社会科学基金重点项目《汉语语用标记形成机制的多视角研究》（14AYY015），主要参与人，2014.10—2018.12。完成。</li>
+</ul>
+<details class="detail-expand">
+<summary>查看更多</summary>
+<ul class="detail-list">
+<li>国家自然科学基金项目《面向双语教学的新疆少数民族多层次普通话语音库建设及声学分析》（NSFC61362037），主要参与人，2014.10—2017.12.10。完成。</li>
+<li>国家自然科学基金项目《汉语语篇中语句焦点和焦点-重音投射》（项目号60775026），参与人，2007.10—2012.12。完成。</li>
+<li>国家语言资源监测与研究中心有声媒体语言分中心项目《广播电视语言带标语音语料库研究》，项目负责人，2006.11—2007.09。完成。</li>
+<li>中国传媒大学“211”二期工程《有声语言语音标注体系研究及语料库开发》（项目号：BBU211-15.3），子项目负责人，2009.09—2012.01。所在总项目获得中国传媒大学“标志性成果奖”。完成。</li>
+<li>中国传媒大学“211”三期工程研究课题《普通话带标语料库及语音样本库研发》，课题负责人。完成。</li>
+</ul>
+</details>
+</article></div></div>
+</section>
+    <section id="lab" class="shell"><div class="section-head reveal"><div><div class="section-kicker">05 / Lab index</div>
+<h2>实验室模块介绍</h2></div>
+<p class="section-intro">Speech Lab 涵盖发音机制、声学分析、韵律和音乐听觉。以下为模块介绍；演示与使用方式可联系咨询。</p></div><div class="lab-grid"><div class="lab-item reveal"><b>语音基础</b><span>声波 · 频谱 · 语图 · 清浊 · 气流</span></div><div class="lab-item reveal"><b>发音与共鸣</b><span>元音 · 声母 · 韵母 · 口腔 / 胸腔 / 头腔共鸣</span></div><div class="lab-item reveal"><b>韵律与声调</b><span>声调 · 语调 · 重音 · F0 曲线编辑 · TextGrid</span></div><div class="lab-item reveal"><b>声音与音乐</b><span>纯音与复合音 · 谐波 · 律制 · 中国五声调式</span></div></div>
+</section>
+    <section id="contact" class="shell"><div class="download reveal"><div>
+<h2>联系与访问咨询</h2>
+<p>欢迎就语音教学、声学分析、语料研究及工具使用交流。咨询平台访问时，请注明平台名称与用途。</p></div><div class="hero-actions"><a class="button primary" href="mailto:chenyd@cuc.edu.cn">发送邮件 ↗</a><a class="contact-address" href="mailto:chenyd@cuc.edu.cn">chenyd@cuc.edu.cn</a></div></div>
+</section>
+  </main>
+<footer><div class="shell footer-row"><span>© 2026 陈玉东 / SoundSpace</span><div class="footer-links"><a href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:chenyd@cuc.edu.cn">Email</a><a href="#top">返回顶部 ↑</a></div></div>
+</footer>
+
+  <script>
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuSummary = mobileMenu.querySelector('summary');
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.open = false;
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.setAttribute('tabindex', '-1');
+          target.focus({preventScroll:true});
+        }
+      });
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && mobileMenu.open) {
+        mobileMenu.open = false;
+        menuSummary.focus();
+      }
+    });
+    document.addEventListener('click', event => {
+      if (mobileMenu.open && !mobileMenu.contains(event.target)) mobileMenu.open = false;
+    });
+    const mobileWidth = window.matchMedia('(max-width:960px)');
+    mobileWidth.addEventListener('change', event => {
+      if (!event.matches) mobileMenu.open = false;
+    });
+    if ('IntersectionObserver' in window) {
+      const motion = window.matchMedia('(prefers-reduced-motion:reduce)');
+      if (!motion.matches) {
+        const revealObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, {threshold:.08});
+        document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+      }
+      const links = [...document.querySelectorAll('.nav-links a')];
+      const sectionObserver = new IntersectionObserver(entries => {
+        const current = entries.filter(entry => entry.isIntersecting)
+          .sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (!current) return;
+        links.forEach(link => {
+          const active = link.getAttribute('href') === '#' + current.target.id;
+          link.classList.toggle('active', active);
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      }, {rootMargin:'-15% 0px -65% 0px'});
+      links.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (section) sectionObserver.observe(section);
+      });
+    }
+  </script>
 </body>
 </html>

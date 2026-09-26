@@ -1,98 +1,69 @@
-# my-homepage
+# 陈玉东个人学术主页
 
-个人主页站点源码，线上地址：**[soundspace.club](https://soundspace.club/)**
+站点：[soundspace.club](https://soundspace.club/)
 
-> AI 助力，争分夺秒，让妄想日渐成真 · 坐标北京
+内容：学术简介、研究平台、语音研究工具、详细简历与实验室模块介绍。
 
----
+## 文件结构
 
-## 在线一览
-
-| 入口 | 说明 |
-|------|------|
-| [soundspace.club](https://soundspace.club/) | 本仓库静态主页 |
-| [GitHub @myddgithub](https://github.com/myddgithub) | 代码与项目 |
-
----
-
-## 仓库里有什么
-
-```
+```text
 my-homepage/
-├── index.html          # 主页（头像、简介、链接、ToPics 桌面版下载）
-├── myphoto.jpeg        # 头像
-├── ToPics.7z.001–004   # 桌面版 ToPics 分卷下载（7-Zip 合并）
+├── index.html     # 单页主页，内含响应式样式与导航交互
+├── myphoto.jpeg   # 个人照片
+├── robots.txt    # 搜索引擎抓取说明
+├── sitemap.xml   # 站点地图
 ├── LICENSE
 └── README.md
 ```
 
-主页是单页 HTML：渐变背景 + 毛玻璃卡片，无需构建步骤。
+网站为静态 HTML，无需构建。桌面版显示章节导航，手机和平板使用可展开菜单。
+页面正文默认可见，JavaScript 用于菜单增强和入场动画；系统开启“减少动态效果”时不播放动画。
 
-### ToPics 桌面版下载说明
+## 平台与工具访问
 
-页面提供分卷包，下载后请用 **7-Zip** / **Bandizip** 等工具合并解压：
+| 项目 | 入口与访问条件 |
+| --- | --- |
+| AI 中文语音教学 | [ai.soundspace.club](https://ai.soundspace.club/)，需登录账号 |
+| Json2TG | [json2tg.soundspace.club](https://json2tg.soundspace.club/)，需访问凭据 |
+| ToPics 韵律画图 | [topics.soundspace.club](https://topics.soundspace.club/)，需访问凭据 |
+| 音视频转换与剪辑 | [公开源码](https://github.com/myddgithub/media-workbench-web)，按项目文档部署 |
+| Speech Lab / WhisperX-Me | 主页提供功能介绍，演示与访问方式请联系咨询 |
+| SoundSpace 语料平台 | 内网部署，访问方式请联系咨询 |
 
-1. 将 `ToPics.7z.001` … `ToPics.7z.004` 放在同一目录  
-2. 对 `ToPics.7z.001` 选择「解压」  
-3. 运行解压出的 `ToPics.exe`（或新版 `ToPics_v2.exe`）
-
-| 分卷 | 约大小 |
-|------|--------|
-| Part 1–3 | 各 20 MB |
-| Part 4 | 约 8.3 MB |
-
-源码与打包说明另见：
-
-- 桌面：**[myddgithub/ToPics](https://github.com/myddgithub/ToPics)**  
-
----
+本次核验中，`tg.soundspace.club` 实际指向 Json2TG，不能作为 WhisperX 的入口。
+本仓库当前版本不再提供 ToPics 桌面版分卷安装包。
 
 ## 本地预览
 
-任意静态服务器即可，例如：
+在仓库根目录运行：
 
 ```bash
-# Python
-cd my-homepage
-python -m http.server 8080
-# 浏览器打开 http://127.0.0.1:8080/
+python -m http.server 8080 --bind 127.0.0.1
 ```
 
-或直接双击打开 `index.html`（部分浏览器对本地相对路径策略不同，推荐用本地 server）。
+浏览器打开 [本地预览](http://127.0.0.1:8080/)。
 
----
+## 部署与维护
 
-## 部署
+现有站点使用 Cloudflare Pages 的 Git 集成。将审核后的修改推送到本仓库
+`main` 分支会触发部署；在提交检查中确认 “Cloudflare Pages” 成功后，
+再核对 [正式站点](https://soundspace.club/) 的实际内容。
 
-当前对外域名：**https://soundspace.club/**
+更新内容时：
 
-常见做法（任选其一）：
-
-1. **Cloudflare Pages / 对象存储 + CDN**：绑定域名，根目录指向本仓库静态文件  
-2. **GitHub Pages**：Settings → Pages → Deploy from branch `main` / `/`（若启用）  
-3. **任意 Nginx / Caddy**：`root` 指向本目录，默认 `index.html`
-
-修改主页后提交 `main`，按你现有流水线发布即可。
-
----
-
-## 相关项目
-
-| 仓库 | 角色 |
-|------|------|
-| [ToPics](https://github.com/myddgithub/ToPics) | 桌面批量韵律出图（v2） |
-| [topics-web](https://github.com/myddgithub/topics-web) | ToPics Web MVP（Docker / Tunnel） |
-| [nas-corpus-starter](https://github.com/myddgithub/nas-corpus-starter) | NAS 语料库平台 starter |
-
----
+- 同步维护 `sitemap.xml` 的 `lastmod`。
+- 以未登录访客身份检查公开链接和服务名称。
+- 保留论文与科研项目的原生折叠交互，两处按钮文字均为“查看更多”。
+- 检查桌面、平板和手机宽度，以及键盘菜单操作与减少动态效果设置。
+- 学术署名、经历、论文数量及项目状态应依据原始资料更新。
 
 ## 联系
 
-- GitHub：[@myddgithub](https://github.com/myddgithub)  
-- Email：[edwardcyd@gmail.com](mailto:edwardcyd@gmail.com)
+- 邮箱：[chenyd@cuc.edu.cn](mailto:chenyd@cuc.edu.cn)
+- GitHub：[@myddgithub](https://github.com/myddgithub)
 
----
+咨询平台访问时，请注明平台名称与用途。
 
-## License
+## 许可
 
-见 [LICENSE](./LICENSE)。头像与分卷安装包仅供本站分发用途；第三方依赖（如 parselmouth / ffmpeg）请遵守其各自许可。
+代码许可见 [LICENSE](./LICENSE)。头像仅供本站分发用途；第三方内容与依赖遵循各自许可。
