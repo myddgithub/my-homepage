@@ -122,7 +122,7 @@
     .tags { display:flex; gap:7px; flex-wrap:wrap; margin-top:auto; padding-top:22px; }
     .tag { border:1px solid var(--line); border-radius:999px; padding:3px 9px; color:#b4d4d9; font-size:12px; }
     .project .access-note { font-size:13px; margin-top:16px; }
-    .access-note a,.tool-note a,.reference-note a,.citation-link { color:var(--cyan); text-decoration:underline; text-underline-offset:4px; }
+    .access-note a,.tool-status a,.tool-note a,.reference-note a,.citation-link { color:var(--cyan); text-decoration:underline; text-underline-offset:4px; }
     .project-link { display:inline-flex; align-items:center; min-height:44px; margin-top:12px; color:var(--cyan); font-size:15px; font-weight:700; }
     .tool-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
     .tool-card { display:flex; flex-direction:column; padding:23px; border:1px solid var(--line); background:var(--panel); }
@@ -287,7 +287,7 @@
 <article class="project reveal"><div class="project-top"><span>03 / CORPUS</span><span class="project-icon">⌁</span></div>
 <h3>SoundSpace<small>多模态语料与韵律研究平台</small></h3>
 <p>语料研究的长期基础设施：规则、拼音与声调检索，语料浏览，TextGrid 在线编辑与发布，多模态数据导出、声学特征提取与统计，以及数据入库、权限管理和处理记录追踪。</p><div class="tags"><span class="tag">Corpus</span><span class="tag">TextGrid</span><span class="tag">Provenance</span></div>
-<p class="access-note">私有 NAS 平台 · 需连接 Tailscale，并使用管理员分发的账号登录。</p><a class="project-link" href="#contact">咨询语料平台访问 ↗</a>
+<p class="access-note">私有 NAS 平台 · 通过可访问 NAS 局域网的 Tailscale 通道，并取得管理员分发的账号后可访问；同一局域网可直接打开。</p><a class="project-link" href="http://192.168.1.2:8000/" target="_blank" rel="noreferrer">打开语料平台 ↗</a>
 </article></div></div>
 </section>
 <section id="tools" class="shell"><div class="section-head reveal"><div><div class="section-kicker">03 / Tools</div>
@@ -295,7 +295,7 @@
 <p class="section-intro">从语音转写、JSON 转 TextGrid，到音视频处理和韵律画图，工具链覆盖研究资料进入平台前后的关键步骤。</p></div><div class="tool-grid">
 <article class="tool-card reveal"><div class="tool-type">ASR / ALIGNMENT</div>
 <h3>WhisperX-Me</h3>
-<p>WhisperX 词级转写、中文强制对齐与时间轴处理，适合把音视频素材加工成可编辑的语音数据。</p><div class="tool-status">个人电脑部署 · 需主机开机并启动服务，通过 Tailscale 等工具共享使用。</div><a class="tool-link" href="#contact">咨询共享使用 ↗</a>
+<p>WhisperX 词级转写、中文强制对齐与时间轴处理，适合把音视频素材加工成可编辑的语音数据。</p><div class="tool-status">本机入口仅适用于运行服务的电脑。远程使用需主机开机、启动服务并启用 Tailscale 等共享通道；共享地址请<a href="#contact">联系咨询</a>。</div><a class="tool-link" href="http://127.0.0.1:8766/" target="_blank" rel="noreferrer">打开本机 WhisperX ↗</a>
 </article>
 <article class="tool-card reveal"><div class="tool-type">JSON → TEXTGRID</div>
 <h3>Json2TG</h3>
@@ -307,9 +307,9 @@
 </article>
 <article class="tool-card reveal"><div class="project-top"><span>MEDIA TOOLS</span><span class="project-icon">▣</span></div>
 <h3>音视频转换与剪辑</h3>
-<p>面向研究素材的格式转换、切分、合并、抽取和批处理，为转写、标注与语料入库准备统一媒体文件。</p><div class="tool-status">源码公开 · NAS / 本地部署</div><a class="tool-link" href="https://github.com/myddgithub/media-workbench-web" target="_blank" rel="noreferrer">查看公开仓库 ↗</a>
+<p>面向研究素材的格式转换、切分、合并、抽取和批处理，为转写、标注与语料入库准备统一媒体文件。</p><div class="tool-status">源码公开 · NAS / 本地部署；NAS 服务通过获授权的 Tailscale 通道访问，连接方式请<a href="#contact">联系咨询</a>。</div><a class="tool-link" href="https://github.com/myddgithub/media-workbench-web" target="_blank" rel="noreferrer">查看公开仓库 ↗</a>
 </article></div>
-<p class="tool-note">在线服务需相应账号或访问凭据，可<a href="#contact">联系咨询</a>。更多已公开的工具源码见 <a href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub 项目列表 ↗</a>。</p></div>
+<p class="tool-note">各服务的访问条件见卡片说明，可<a href="#contact">联系咨询</a>。更多脚本与研究工具见 <a href="https://github.com/myddgithub/mypy" target="_blank" rel="noreferrer">myddgithub/mypy ↗</a>（私有仓库，需 GitHub 授权）；已公开源码见 <a href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub 项目列表 ↗</a>。</p></div>
 </section>
 <section id="resume" class="resume-details"><div class="shell"><div class="section-head reveal"><div><div class="section-kicker">04 / Curriculum vitae</div>
 <h2>学术简历</h2></div>

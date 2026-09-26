@@ -26,12 +26,14 @@ my-homepage/
 | AI 中文语音教学 | Google Cloud 提供服务：[ai.soundspace.club](https://ai.soundspace.club/)，需使用管理员分发的账号登录 |
 | Json2TG | [json2tg.soundspace.club](https://json2tg.soundspace.club/)，需访问凭据 |
 | ToPics 韵律画图 | [topics.soundspace.club](https://topics.soundspace.club/)，需访问凭据 |
-| 音视频转换与剪辑 | [公开源码](https://github.com/myddgithub/media-workbench-web)，按项目文档部署 |
+| 音视频转换与剪辑 | [公开源码](https://github.com/myddgithub/media-workbench-web)，支持本地部署；NAS 服务通过获授权的 Tailscale 通道访问，连接方式请联系咨询 |
 | Speech Lab | [GitHub 私有仓库](https://github.com/myddgithub/speech-lab)，尚未公开，仅获授权用户可访问 |
-| WhisperX-Me | 个人电脑部署；需主机开机并启动服务，通过 Tailscale 等工具共享使用，连接方式请联系咨询 |
-| SoundSpace 语料平台 | 私有 NAS 部署；需连接 Tailscale，并使用管理员分发的账号登录 |
+| WhisperX-Me | [本机入口](http://127.0.0.1:8766/)，仅适用于运行服务的电脑；远程使用需主机开机、启动服务并启用 Tailscale 等共享通道，共享地址请联系咨询 |
+| SoundSpace 语料平台 | [恢复原有平台入口](http://192.168.1.2:8000/)，需在同一局域网或使用可访问 NAS 局域网的 Tailscale 通道，并以管理员分发的账号登录 |
+| mypy 脚本集合 | [GitHub 私有仓库](https://github.com/myddgithub/mypy)，需 GitHub 授权 |
 
 本次核验中，`tg.soundspace.club` 实际指向 Json2TG，不能作为 WhisperX 的入口。
+WhisperX 当前仅监听 `127.0.0.1:8766`，尚未配置 Tailscale Serve；连接 Tailscale 本身不会自动让该本机地址可供远程访问。
 本仓库当前版本不再提供 ToPics 桌面版分卷安装包。
 
 ## 本地预览
