@@ -23,12 +23,13 @@ my-homepage/
 
 | 项目 | 入口与访问条件 |
 | --- | --- |
-| AI 中文语音教学 | [ai.soundspace.club](https://ai.soundspace.club/)，需登录账号 |
+| AI 中文语音教学 | Google Cloud 提供服务：[ai.soundspace.club](https://ai.soundspace.club/)，需使用管理员分发的账号登录 |
 | Json2TG | [json2tg.soundspace.club](https://json2tg.soundspace.club/)，需访问凭据 |
 | ToPics 韵律画图 | [topics.soundspace.club](https://topics.soundspace.club/)，需访问凭据 |
 | 音视频转换与剪辑 | [公开源码](https://github.com/myddgithub/media-workbench-web)，按项目文档部署 |
-| Speech Lab / WhisperX-Me | 主页提供功能介绍，演示与访问方式请联系咨询 |
-| SoundSpace 语料平台 | 内网部署，访问方式请联系咨询 |
+| Speech Lab | [GitHub 私有仓库](https://github.com/myddgithub/speech-lab)，尚未公开，仅获授权用户可访问 |
+| WhisperX-Me | 个人电脑部署；需主机开机并启动服务，通过 Tailscale 等工具共享使用，连接方式请联系咨询 |
+| SoundSpace 语料平台 | 私有 NAS 部署；需连接 Tailscale，并使用管理员分发的账号登录 |
 
 本次核验中，`tg.soundspace.club` 实际指向 Json2TG，不能作为 WhisperX 的入口。
 本仓库当前版本不再提供 ToPics 桌面版分卷安装包。
