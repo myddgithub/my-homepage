@@ -28,12 +28,12 @@ my-homepage/
 | ToPics 韵律画图 | [topics.soundspace.club](https://topics.soundspace.club/)，需访问凭据 |
 | 音视频转换与剪辑 | [公开源码](https://github.com/myddgithub/media-workbench-web)，支持本地部署；NAS 服务通过获授权的 Tailscale 通道访问，连接方式请联系咨询 |
 | Speech Lab | [GitHub 私有仓库](https://github.com/myddgithub/speech-lab)，尚未公开，仅获授权用户可访问 |
-| WhisperX-Me | 使用主页提供的 Tailscale 入口，需连接获授权的 Tailscale 通道，服务主机保持开机、WhisperX-Me 服务已启动且允许 Tailscale 连接；访问权限请联系咨询 |
+| WhisperX-Me | 使用主页提供的 Tailscale HTTPS 入口，需连接获授权的 Tailscale 通道，服务主机保持开机且 WhisperX-Me 服务已启动；网页录音需允许浏览器使用麦克风，访问权限请联系咨询 |
 | SoundSpace 语料平台 | [恢复原有平台入口](http://192.168.1.2:8000/)，需在同一局域网或使用可访问 NAS 局域网的 Tailscale 通道，并以管理员分发的账号登录 |
 | mypy 脚本集合 | [GitHub 私有仓库](https://github.com/myddgithub/mypy)，需 GitHub 授权 |
 
 本次核验中，`tg.soundspace.club` 实际指向 Json2TG，不能作为 WhisperX 的入口。
-WhisperX-Me 已配置 Tailscale Serve，将 Tailscale 的 8766 端口转发至本机 `127.0.0.1:8766`，仅供获授权的 Tailscale 网络访问，不开放公网。访问时需保持 Tailscale 与 WhisperX-Me 服务运行。
+WhisperX-Me 已配置 Tailscale Serve，通过 HTTPS 入口代理至本机 `127.0.0.1:8766`，仅供获授权的 Tailscale 网络访问，不开放公网。原有 8766 端口的 HTTP 转发仍保留，但网页录音请使用 HTTPS 入口并授予麦克风权限。访问时需保持 Tailscale 与 WhisperX-Me 服务运行。
 本仓库当前版本不再提供 ToPics 桌面版分卷安装包。
 
 ## 本地预览
