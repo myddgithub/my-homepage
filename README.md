@@ -34,6 +34,7 @@ my-homepage/
 
 本次核验中，`tg.soundspace.club` 实际指向 Json2TG，不能作为 WhisperX 的入口。
 WhisperX-Me 已配置 Tailscale Serve，通过 HTTPS 入口代理至本机 `127.0.0.1:8766`，仅供获授权的 Tailscale 网络访问，不开放公网。原有 8766 端口的 HTTP 转发仍保留，但网页录音请使用 HTTPS 入口并授予麦克风权限。访问时需保持 Tailscale 与 WhisperX-Me 服务运行。
+WhisperX-Me 的实际运行目录为 `D:\软件\WhisperX-Me-Web\WhisperX-Me-Web`，该目录包含便携版 Python runtime、模型和 FFmpeg；`D:\mypy\whisperx-me-web` 是对应的 GitHub 源码仓库，用于版本维护和重新打包。主页只通过 Tailscale HTTPS 地址访问运行中的部署目录，不直接调用源码仓库路径。
 本仓库当前版本不再提供 ToPics 桌面版分卷安装包。
 
 ## 本地预览
