@@ -26,6 +26,7 @@ my-homepage/
 | AI 中文语音教学 | Google Cloud 提供服务：[ai.soundspace.club](https://ai.soundspace.club/)，需使用管理员分发的账号登录 |
 | Json2TG | [json2tg.soundspace.club](https://json2tg.soundspace.club/)，需访问凭据 |
 | ToPics 韵律画图 | [topics.soundspace.club](https://topics.soundspace.club/)，需访问凭据 |
+| VASTEditor | [editor.soundspace.club](https://editor.soundspace.club/)，需访问凭据；NAS 上的 TextGrid 音视频编辑器 |
 | 音视频转换与剪辑 | [公开源码](https://github.com/myddgithub/media-workbench-web)，支持本地部署；NAS 服务通过获授权的 Tailscale 通道访问，连接方式请联系咨询 |
 | Speech Lab | [GitHub 私有仓库](https://github.com/myddgithub/speech-lab)，尚未公开，仅获授权用户可访问 |
 | WhisperX-Me | 使用主页提供的 Tailscale HTTPS 入口，需连接获授权的 Tailscale 通道，服务主机保持开机且 WhisperX-Me 服务已启动；网页录音需允许浏览器使用麦克风，访问权限请联系咨询 |
