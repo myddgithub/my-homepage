@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="陈玉东">
-  <meta name="description" content="陈玉东的个人学术主页：实验语音学、普通话语音教学、AI 与多模态语料研究。">
+  <meta name="description" content="陈玉东（Chen Yudong）的个人学术主页：实验语音学、普通话语音教学、AI 与多模态语料研究。">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#071019">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="陈玉东 · 语音、AI 与语料研究">
   <meta property="og:description" content="中国传媒大学陈玉东的学术简历、研究平台与语音研究工具。">
   <meta property="og:url" content="https://soundspace.club/">
@@ -67,6 +68,10 @@
     .nav-links { display:flex; gap:22px; color:var(--muted); font-size:14px; }
     .nav-links a { padding:10px 0; white-space:nowrap; }
     .nav-links a:hover,.nav-links a.active { color:var(--cyan); }
+    .language-switch { display:inline-flex; gap:2px; padding:3px; border:1px solid var(--line); border-radius:999px; background:rgba(13,29,42,.72); }
+    .language-switch button { border:0; border-radius:999px; padding:5px 9px; color:var(--muted); background:transparent; font:700 12px/1 inherit; cursor:pointer; }
+    .language-switch button:hover,.language-switch button[aria-pressed="true"] { color:var(--bg); background:var(--mint); }
+    .language-switch button:focus-visible { outline:2px solid var(--cyan); outline-offset:2px; }
     .nav-cta { color:var(--bg); background:var(--mint); padding:9px 16px; border-radius:999px; font-size:14px; font-weight:800; white-space:nowrap; }
     .mobile-menu { display:none; }
     .hero { min-height:660px; display:grid; align-items:center; padding:132px 0 68px; position:relative; isolation:isolate; }
@@ -74,7 +79,7 @@
     .hero-grid { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr); gap:48px; align-items:center; }
     .eyebrow,.section-kicker { color:var(--cyan); letter-spacing:.13em; font-size:12px; text-transform:uppercase; font-weight:800; }
     h1 { font-size:clamp(36px,5.1vw,66px); line-height:1.18; letter-spacing:-.045em; margin:20px 0 24px; }
-    h1 span { color:var(--mint); white-space:nowrap; }
+    h1 > span:last-child { color:var(--mint); white-space:nowrap; }
     .hero-identity { font-size:23px; font-weight:700; margin:0 0 12px; }
     .hero-identity span { color:var(--muted); font-size:15px; font-weight:400; }
     .lead { color:#c5d5d8; font-size:17px; max-width:600px; margin:0; }
@@ -210,6 +215,8 @@
       .brand { font-size:13px; gap:7px; }
       .brand-mark,.brand-mark svg { width:32px; height:28px; }
       .nav-cta { font-size:13px; padding:9px 11px; }
+      .language-switch { padding:2px; }
+      .language-switch button { padding:5px 7px; }
       .mobile-menu summary { font-size:13px; padding:10px; }
       .mobile-links { top:67px; padding:12px 16px; }
       html { scroll-padding-top:84px; }
@@ -244,112 +251,112 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#top">跳至主要内容</a>
+  <a class="skip-link" href="#top" data-i18n data-en="Skip to main content">跳至主要内容</a>
   <header class="topbar">
-<nav class="nav shell" aria-label="主导航"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 32" role="img"><path d="M6 5h28l6 6v17H10l-6-6V10z" fill="none" stroke="#d85b54" stroke-width="1.3"/><g fill="none" stroke="#f5fffb" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9v15c0 2 1 4 3 5M10 14h6M10 19h6M11 27c2 1 4 1 6 0"/><path d="M20 10h15M28 8v18M20 16h15M21 16l13 10M34 16L21 26"/></g><path d="M8 25c6-3 9 1 14-1s8 1 13-2" fill="none" stroke="#e87568" stroke-width="1.05" stroke-linecap="round"/><circle cx="37" cy="7" r="1.35" fill="var(--cyan)"/></svg></span><span>CHEN YUDONG</span></a><div class="nav-links"><a href="#about">关于</a><a href="#projects">研究平台</a><a href="#tools">工具</a><a href="#resume">简历</a><a href="#lab">实验室</a><a href="#contact">联系我</a></div>
+<nav class="nav shell" aria-label="主导航"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 32" role="img"><path d="M6 5h28l6 6v17H10l-6-6V10z" fill="none" stroke="#d85b54" stroke-width="1.3"/><g fill="none" stroke="#f5fffb" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9v15c0 2 1 4 3 5M10 14h6M10 19h6M11 27c2 1 4 1 6 0"/><path d="M20 10h15M28 8v18M20 16h15M21 16l13 10M34 16L21 26"/></g><path d="M8 25c6-3 9 1 14-1s8 1 13-2" fill="none" stroke="#e87568" stroke-width="1.05" stroke-linecap="round"/><circle cx="37" cy="7" r="1.35" fill="var(--cyan)"/></svg></span><span>CHEN YUDONG</span></a><div class="nav-links"><a href="#about" data-i18n data-en="Profile">关于</a><a href="#projects" data-i18n data-en="Platforms">研究平台</a><a href="#tools" data-i18n data-en="Tools">工具</a><a href="#resume" data-i18n data-en="CV">简历</a><a href="#lab" data-i18n data-en="Lab">实验室</a><a href="#contact" data-i18n data-en="Contact">联系我</a></div>
 <details class="mobile-menu">
-<summary>菜单</summary><div class="mobile-links"><a href="#about">关于</a><a href="#projects">研究平台</a><a href="#tools">工具</a><a href="#resume">简历</a><a href="#lab">实验室</a><a href="#contact">联系我</a></div>
-</details><a class="nav-cta" href="mailto:chenyd@cuc.edu.cn">联系我 ↗</a>
+<summary data-i18n data-en="Menu">菜单</summary><div class="mobile-links"><a href="#about" data-i18n data-en="Profile">关于</a><a href="#projects" data-i18n data-en="Platforms">研究平台</a><a href="#tools" data-i18n data-en="Tools">工具</a><a href="#resume" data-i18n data-en="CV">简历</a><a href="#lab" data-i18n data-en="Lab">实验室</a><a href="#contact" data-i18n data-en="Contact">联系我</a></div>
+</details><div class="language-switch" role="group" aria-label="语言 / Language"><button type="button" data-language="zh" aria-pressed="true">中</button><button type="button" data-language="en" aria-pressed="false">EN</button></div><a class="nav-cta" href="mailto:chenyd@cuc.edu.cn" data-i18n data-en="Contact me ↗">联系我 ↗</a>
 </nav>
 </header>
   <main id="top" tabindex="-1">
 <section class="hero shell"><div class="hero-grid"><div class="reveal"><div class="eyebrow">Speech · AI · Corpus / 2026</div>
-<h1>把声音变成<br><span>可研究的空间。</span></h1>
-<p class="hero-identity">陈玉东 <span>· 中国传媒大学</span></p>
-<p class="lead">教授、博士生导师、国家级普通话水平测试员。主要研究语音语调、韵律互动、汉语教学与艺术发声，并持续把这些知识转化为可操作的 AI 工具与研究平台。</p><div class="hero-actions"><a class="button primary" href="#tools">使用研究工具 <span>↓</span></a><a class="button" href="#resume">查看学术简历</a><a class="button" href="#projects">探索研究平台</a></div><div class="hero-note">中国传媒大学人文学院 · 北京</div></div><div class="portrait-wrap reveal"><div class="portrait-card"><img src="myphoto.jpeg" alt="陈玉东照片" width="156" height="188" decoding="async"><div class="portrait-label"><span>RESEARCH PROFILE</span><strong>音声 · 语言 · 计算</strong></div></div><span class="signal" aria-hidden="true"></span></div></div>
+<h1><span data-i18n data-en="Turn sound into">把声音变成</span><br><span data-i18n data-en="a space for research.">可研究的空间。</span></h1>
+<p class="hero-identity">陈玉东 <span data-i18n data-en="· Communication University of China">· 中国传媒大学</span></p>
+<p class="lead" data-i18n data-en="Professor, doctoral supervisor, and National Putonghua Proficiency Test examiner. My research focuses on speech prosody, interaction, Chinese language teaching, and voice performance, turning these ideas into practical AI tools and research platforms.">教授、博士生导师、国家级普通话水平测试员。主要研究语音语调、韵律互动、汉语教学与艺术发声，并持续把这些知识转化为可操作的 AI 工具与研究平台。</p><div class="hero-actions"><a class="button primary" href="#tools" data-i18n data-en="Explore research tools ↓">使用研究工具 <span>↓</span></a><a class="button" href="#resume" data-i18n data-en="View academic CV">查看学术简历</a><a class="button" href="#projects" data-i18n data-en="Explore platforms">探索研究平台</a></div><div class="hero-note" data-i18n data-en="School of Humanities, Communication University of China · Beijing">中国传媒大学人文学院 · 北京</div></div><div class="portrait-wrap reveal"><div class="portrait-card"><img src="myphoto.jpeg" alt="陈玉东照片" width="156" height="188" decoding="async"><div class="portrait-label"><span>RESEARCH PROFILE</span><strong data-i18n data-en="Voice · Language · Computation">音声 · 语言 · 计算</strong></div></div><span class="signal" aria-hidden="true"></span></div></div>
 </section>
-    <div class="metrics shell reveal"><div class="metric"><b>30+</b><span>学术论文</span></div><div class="metric"><b>2 部</b><span>学术专著</span></div><div class="metric"><b>1992—</b><span>持续从事语音与语言教学研究</span></div></div>
+    <div class="metrics shell reveal"><div class="metric"><b>30+</b><span data-i18n data-en="Academic papers">学术论文</span></div><div class="metric"><b data-i18n data-en="2 books">2 部</b><span data-i18n data-en="Research monographs">学术专著</span></div><div class="metric"><b>1992—</b><span data-i18n data-en="Ongoing research in speech and language teaching">持续从事语音与语言教学研究</span></div></div>
     <section id="about" class="shell"><div class="section-head reveal"><div><div class="section-kicker">01 / Profile</div>
-<h2>研究方向与简介</h2></div>
-<p class="section-intro">以实验语音学为基础，关注言语韵律与互动，将语言研究与 AI 语音教学、语料分析相结合。</p></div><div class="bio-grid"><div class="bio-copy reveal">
-<p>研究领域包括实验语音学、互动语言学、言语韵律、汉语教学和艺术发声学。曾在中国科学院心理研究所从事博士后研究，并任塞尔维亚贝尔格莱德孔子学院中方院长。</p>
-<p>已出版《汉语语篇的重音层级研究》《传媒有声语言实验研究》两部专著，主编《趣味汉语语音课本》，发表学术论文 30 余篇。</p><div class="quote">“AI 助力，争分夺秒，让妄想日渐成真。”</div></div><div class="timeline reveal"><div class="timeline-item"><div class="timeline-year">1988—2004</div><div>
-<h3>主要学习经历</h3>
-<p>河南大学汉语言文学学士；北京广播学院（现中国传媒大学）播音主持艺术学院应用语言学系，语言学及应用语言学硕士；北京大学中文系语言学及应用语言学博士，实验语音学方向。</p></div></div><div class="timeline-item"><div class="timeline-year">1992—至今</div><div>
-<h3>主要工作经历</h3>
-<p>先后在商丘师范学院、中国传媒大学任教，曾任贝尔格莱德孔子学院中方院长；2018 年起任中国传媒大学人文学院教授。</p></div></div><div class="timeline-item"><div class="timeline-year">2024—2027</div><div>
-<h3>当前研究项目</h3>
-<p>主持国家社科基金一般项目“互动视域下语体驱动的汉语韵律表达研究”（24BYY039），并持续建设 AI 语音教学与 SoundSpace 语料研究平台。</p></div></div></div></div>
+<h2 data-i18n data-en="Research profile">研究方向与简介</h2></div>
+<p class="section-intro" data-i18n data-en="Grounded in experimental phonetics, I study speech prosody and interaction, connecting language research with AI-assisted Chinese teaching and corpus analysis.">以实验语音学为基础，关注言语韵律与互动，将语言研究与 AI 语音教学、语料分析相结合。</p></div><div class="bio-grid"><div class="bio-copy reveal">
+<p data-i18n data-en="My research covers experimental phonetics, interactional linguistics, speech prosody, Chinese language teaching, and voice performance. I conducted postdoctoral research at the Institute of Psychology, Chinese Academy of Sciences, and served as the Chinese director of the Confucius Institute in Belgrade, Serbia.">研究领域包括实验语音学、互动语言学、言语韵律、汉语教学和艺术发声学。曾在中国科学院心理研究所从事博士后研究，并任塞尔维亚贝尔格莱德孔子学院中方院长。</p>
+<p data-i18n data-en="I have published two research monographs, edited A Fun Chinese Phonetics Textbook, and published more than 30 academic papers.">已出版《汉语语篇的重音层级研究》《传媒有声语言实验研究》两部专著，主编《趣味汉语语音课本》，发表学术论文 30 余篇。</p><div class="quote" data-i18n data-en="“With AI as a catalyst, make every second count and turn imagination into reality.”">“AI 助力，争分夺秒，让妄想日渐成真。”</div></div><div class="timeline reveal"><div class="timeline-item"><div class="timeline-year">1988—2004</div><div>
+<h3 data-i18n data-en="Education">主要学习经历</h3>
+<p data-i18n data-en="BA in Chinese Language and Literature at Henan University; MA in Linguistics and Applied Linguistics at the School of Broadcasting and Hosting Arts, Beijing Broadcasting Institute (now Communication University of China); PhD in Linguistics and Applied Linguistics, specializing in experimental phonetics, at Peking University.">河南大学汉语言文学学士；北京广播学院（现中国传媒大学）播音主持艺术学院应用语言学系，语言学及应用语言学硕士；北京大学中文系语言学及应用语言学博士，实验语音学方向。</p></div></div><div class="timeline-item"><div class="timeline-year">1992—至今</div><div>
+<h3 data-i18n data-en="Academic appointments">主要工作经历</h3>
+<p data-i18n data-en="Taught at Shangqiu Normal University and Communication University of China; served as Chinese director of the Confucius Institute in Belgrade; became Professor at the School of Humanities, Communication University of China, in 2018.">先后在商丘师范学院、中国传媒大学任教，曾任贝尔格莱德孔子学院中方院长；2018 年起任中国传媒大学人文学院教授。</p></div></div><div class="timeline-item"><div class="timeline-year">2024—2027</div><div>
+<h3 data-i18n data-en="Current project">当前研究项目</h3>
+<p data-i18n data-en="Principal investigator of the National Social Science Fund project “Style-driven Chinese prosody in interaction” (24BYY039), while continuing to build AI Chinese teaching and SoundSpace corpus research platforms.">主持国家社科基金一般项目“互动视域下语体驱动的汉语韵律表达研究”（24BYY039），并持续建设 AI 语音教学与 SoundSpace 语料研究平台。</p></div></div></div></div>
 </section>
     <section id="projects" class="projects"><div class="shell"><div class="section-head reveal"><div><div class="section-kicker">02 / Platforms</div>
-<h2>研究平台</h2></div>
-<p class="section-intro">从基础概念的教学动画，到 AI 语音教学，再到面向长期研究的语料平台。</p></div><div class="project-grid">
+<h2 data-i18n data-en="Research platforms">研究平台</h2></div>
+<p class="section-intro" data-i18n data-en="From animated introductions to basic concepts, to AI Chinese teaching and a long-term corpus research platform.">从基础概念的教学动画，到 AI 语音教学，再到面向长期研究的语料平台。</p></div><div class="project-grid">
 <article class="project reveal"><div class="project-top"><span>01 / LAB</span><span class="project-icon">∿</span></div>
-<h3>Speech Lab<small>实验语音学交互实验室</small></h3>
-<p>一组浏览器端教学与研究实验：声波、元音、声母、声调、语调、发声、呼吸、共鸣与音乐声学。另有 Intonation Lab，可导入音频、编辑 F0、标注音节并重合成试听。</p><div class="tags"><span class="tag">Web Audio</span><span class="tag">F0 / Praat</span><span class="tag">Bilingual</span></div>
-<p class="access-note">GitHub 私有仓库 · 仅获授权用户可访问</p><a class="project-link" href="https://github.com/myddgithub/speech-lab" target="_blank" rel="noreferrer">查看仓库（需授权） ↗</a>
+<h3>Speech Lab<small data-i18n data-en="Interactive experimental phonetics lab">实验语音学交互实验室</small></h3>
+<p data-i18n data-en="A set of browser-based teaching and research experiments on sound waves, vowels, initials, tones, intonation, voice production, breathing, resonance, and musical acoustics. Intonation Lab also supports audio import, F0 editing, syllable annotation, and resynthesis for listening.">一组浏览器端教学与研究实验：声波、元音、声母、声调、语调、发声、呼吸、共鸣与音乐声学。另有 Intonation Lab，可导入音频、编辑 F0、标注音节并重合成试听。</p><div class="tags"><span class="tag">Web Audio</span><span class="tag">F0 / Praat</span><span class="tag">Bilingual</span></div>
+<p class="access-note" data-i18n data-en="Private GitHub repository · Authorized users only">GitHub 私有仓库 · 仅获授权用户可访问</p><a class="project-link" href="https://github.com/myddgithub/speech-lab" target="_blank" rel="noreferrer" data-i18n data-en="View repository (authorization required) ↗">查看仓库（需授权） ↗</a>
 </article>
 <article class="project reveal"><div class="project-top"><span>02 / TEACHING</span><span class="project-icon">◌</span></div>
-<h3>AI Chinese Teach<small>AI 中文语音教学系统</small></h3>
-<p>面向学生、教师与管理员的语音教学平台：任务、示范音、录音 / 上传、音素与声调评分、流利度反馈、批量评测，以及 TextGrid 编辑与 ToPics 绘图。</p><div class="tags"><span class="tag">ASR</span><span class="tag">语音评分</span><span class="tag">FastAPI</span></div>
-<p class="access-note">Google Cloud 云服务 · 需使用管理员分发的账号登录，<a href="#contact">咨询账号申请</a>。</p><a class="project-link" href="https://ai.soundspace.club/" target="_blank" rel="noreferrer">打开教学平台 ↗</a>
+<h3>AI Chinese Teach<small data-i18n data-en="AI Chinese speech teaching system">AI 中文语音教学系统</small></h3>
+<p data-i18n data-en="A speech teaching platform for students, teachers, and administrators, with assignments, model audio, recording/upload, phoneme and tone scoring, fluency feedback, batch assessment, TextGrid editing, and ToPics plotting.">面向学生、教师与管理员的语音教学平台：任务、示范音、录音 / 上传、音素与声调评分、流利度反馈、批量评测，以及 TextGrid 编辑与 ToPics 绘图。</p><div class="tags"><span class="tag">ASR</span><span class="tag" data-i18n data-en="Speech scoring">语音评分</span><span class="tag">FastAPI</span></div>
+<p class="access-note"><span data-i18n data-en="Google Cloud service · Administrator-issued account required; ">Google Cloud 云服务 · 需使用管理员分发的账号登录，</span><a href="#contact" data-i18n data-en="ask about access">咨询账号申请</a>。</p><a class="project-link" href="https://ai.soundspace.club/" target="_blank" rel="noreferrer" data-i18n data-en="Open teaching platform ↗">打开教学平台 ↗</a>
 </article>
 <article class="project reveal"><div class="project-top"><span>03 / CORPUS</span><span class="project-icon">⌁</span></div>
-<h3>SoundSpace<small>多模态语料与韵律研究平台</small></h3>
-<p>语料研究的长期基础设施：规则、拼音与声调检索，语料浏览，TextGrid 在线编辑与发布，多模态数据导出、声学特征提取与统计，以及数据入库、权限管理和处理记录追踪。</p><div class="tags"><span class="tag">Corpus</span><span class="tag">TextGrid</span><span class="tag">Provenance</span></div>
-<p class="access-note">私有 NAS 平台 · 通过可访问 NAS 局域网的 Tailscale 通道，并取得管理员分发的账号后可访问；同一局域网可直接打开。</p><a class="project-link" href="http://192.168.1.2:8000/" target="_blank" rel="noreferrer">打开语料平台 ↗</a>
+<h3>SoundSpace<small data-i18n data-en="Multimodal corpus and prosody research platform">多模态语料与韵律研究平台</small></h3>
+<p data-i18n data-en="Long-term infrastructure for corpus research: rule, pinyin, and tone search; corpus browsing; online TextGrid editing and publishing; multimodal data export; acoustic feature extraction and statistics; plus data ingestion, access control, and processing provenance.">语料研究的长期基础设施：规则、拼音与声调检索，语料浏览，TextGrid 在线编辑与发布，多模态数据导出、声学特征提取与统计，以及数据入库、权限管理和处理记录追踪。</p><div class="tags"><span class="tag">Corpus</span><span class="tag">TextGrid</span><span class="tag">Provenance</span></div>
+<p class="access-note" data-i18n data-en="Private NAS platform · Available through an authorized Tailscale route to the NAS, with an administrator-issued account; accessible directly on the local network.">私有 NAS 平台 · 通过可访问 NAS 局域网的 Tailscale 通道，并取得管理员分发的账号后可访问；同一局域网可直接打开。</p><a class="project-link" href="http://192.168.1.2:8000/" target="_blank" rel="noreferrer" data-i18n data-en="Open corpus platform ↗">打开语料平台 ↗</a>
 </article></div></div>
 </section>
 <section id="tools" class="shell"><div class="section-head reveal"><div><div class="section-kicker">03 / Tools</div>
-<h2>语音研究工具</h2></div>
-<p class="section-intro">从语音转写、JSON 转 TextGrid、标注编辑，到音视频处理和韵律画图，工具链覆盖研究资料进入平台前后的关键步骤。</p></div><div class="tool-grid">
+<h2 data-i18n data-en="Speech research tools">语音研究工具</h2></div>
+<p class="section-intro" data-i18n data-en="From speech transcription, JSON-to-TextGrid conversion, and annotation editing to media processing and prosody plotting, this toolkit covers key steps before and after research materials enter the platform.">从语音转写、JSON 转 TextGrid、标注编辑，到音视频处理和韵律画图，工具链覆盖研究资料进入平台前后的关键步骤。</p></div><div class="tool-grid">
 <article class="tool-card reveal"><div class="tool-type">ASR / ALIGNMENT</div>
 <h3>WhisperX-Me</h3>
-<p>WhisperX 词级转写、中文强制对齐与时间轴处理，适合把音视频素材加工成可编辑的语音数据。</p><div class="tool-status">通过获授权的 Tailscale 通道访问 HTTPS 入口，需服务主机保持开机、WhisperX-Me 服务已启动；网页录音需允许浏览器使用麦克风。访问权限请<a href="#contact">联系咨询</a>。</div><a class="tool-link" href="https://desktop-leiehss.tail267915.ts.net/" target="_blank" rel="noreferrer">打开 WhisperX-Me ↗</a>
+<p data-i18n data-en="Word-level WhisperX transcription, Chinese forced alignment, and timeline processing for turning audio and video into editable speech data.">WhisperX 词级转写、中文强制对齐与时间轴处理，适合把音视频素材加工成可编辑的语音数据。</p><div class="tool-status"><span data-i18n data-en="Access the HTTPS endpoint through an authorized Tailscale route. The host and WhisperX-Me service must be running; browser recording requires microphone permission. For access, ">通过获授权的 Tailscale 通道访问 HTTPS 入口，需服务主机保持开机、WhisperX-Me 服务已启动；网页录音需允许浏览器使用麦克风。访问权限请</span><a href="#contact" data-i18n data-en="contact me">联系咨询</a>。</div><a class="tool-link" href="https://desktop-leiehss.tail267915.ts.net/" target="_blank" rel="noreferrer" data-i18n data-en="Open WhisperX-Me ↗">打开 WhisperX-Me ↗</a>
 </article>
 <article class="tool-card reveal"><div class="tool-type">JSON → TEXTGRID</div>
 <h3>Json2TG</h3>
-<p>将 WhisperX JSON 转换为 TextGrid，并支持规范化（Normalize）、时间调整（Timing）、修复（Repair），以及拼音层和说话人层处理。</p><div class="tool-status">在线服务 · 需要访问凭据</div><a class="tool-link" href="https://json2tg.soundspace.club/" target="_blank" rel="noreferrer">打开 Json2TG ↗</a>
+<p data-i18n data-en="Convert WhisperX JSON to TextGrid with normalization, timing adjustment, repair, pinyin layers, and speaker layers.">将 WhisperX JSON 转换为 TextGrid，并支持规范化（Normalize）、时间调整（Timing）、修复（Repair），以及拼音层和说话人层处理。</p><div class="tool-status" data-i18n data-en="Online service · Access credentials required">在线服务 · 需要访问凭据</div><a class="tool-link" href="https://json2tg.soundspace.club/" target="_blank" rel="noreferrer" data-i18n data-en="Open Json2TG ↗">打开 Json2TG ↗</a>
 </article>
 <article class="tool-card reveal"><div class="tool-type">TOPICS · PROSODY PLOT</div>
-<h3>ToPics 韵律画图</h3>
-<p>上传音频及 TextGrid，调整参数后生成波形、语图、音高、强度、共振峰和标注层的多面板韵律图。</p><div class="tool-status">在线服务 · 需要访问凭据</div><a class="tool-link" href="https://topics.soundspace.club/" target="_blank" rel="noreferrer">打开 ToPics ↗</a>
+<h3>ToPics <span data-i18n data-en="prosody plotting">韵律画图</span></h3>
+<p data-i18n data-en="Upload audio and TextGrid files, adjust parameters, and generate multi-panel prosody plots with waveforms, spectrograms, pitch, intensity, formants, and annotation layers.">上传音频及 TextGrid，调整参数后生成波形、语图、音高、强度、共振峰和标注层的多面板韵律图。</p><div class="tool-status" data-i18n data-en="Online service · Access credentials required">在线服务 · 需要访问凭据</div><a class="tool-link" href="https://topics.soundspace.club/" target="_blank" rel="noreferrer" data-i18n data-en="Open ToPics ↗">打开 ToPics ↗</a>
 </article>
 <article class="tool-card reveal"><div class="project-top"><span>MEDIA TOOLS</span><span class="project-icon">▣</span></div>
-<h3>音视频转换与剪辑</h3>
-<p>面向研究素材的格式转换、切分、合并、抽取和批处理，为转写、标注与语料入库准备统一媒体文件。</p><div class="tool-status">源码公开 · NAS / 本地部署；NAS 服务通过获授权的 Tailscale 通道访问，连接方式请<a href="#contact">联系咨询</a>。</div><a class="tool-link" href="https://github.com/myddgithub/media-workbench-web" target="_blank" rel="noreferrer">查看公开仓库 ↗</a>
+<h3 data-i18n data-en="Audio and video conversion">音视频转换与剪辑</h3>
+<p data-i18n data-en="Format conversion, splitting, merging, extraction, and batch processing for preparing consistent media files for transcription, annotation, and corpus ingestion.">面向研究素材的格式转换、切分、合并、抽取和批处理，为转写、标注与语料入库准备统一媒体文件。</p><div class="tool-status"><span data-i18n data-en="Open source · NAS / local deployment; NAS access uses an authorized Tailscale route. For connection details, ">源码公开 · NAS / 本地部署；NAS 服务通过获授权的 Tailscale 通道访问，连接方式请</span><a href="#contact" data-i18n data-en="contact me">联系咨询</a>。</div><a class="tool-link" href="https://github.com/myddgithub/media-workbench-web" target="_blank" rel="noreferrer" data-i18n data-en="View public repository ↗">查看公开仓库 ↗</a>
 </article></div>
-<p class="tool-note">各服务的访问条件见卡片说明，可<a href="#contact">联系咨询</a>。更多脚本与研究工具见 <a href="https://github.com/myddgithub/mypy" target="_blank" rel="noreferrer">myddgithub/mypy ↗</a>（私有仓库，需 GitHub 授权）；已公开源码见 <a href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub 项目列表 ↗</a>。</p></div>
+<p class="tool-note"><span data-i18n data-en="See each card for access conditions; ">各服务的访问条件见卡片说明，可</span><a href="#contact" data-i18n data-en="contact me">联系咨询</a><span data-i18n data-en=". More scripts and research tools: ">。更多脚本与研究工具见 </span><a href="https://github.com/myddgithub/mypy" target="_blank" rel="noreferrer">myddgithub/mypy ↗</a><span data-i18n data-en=" (private repository; GitHub authorization required); public source code: ">（私有仓库，需 GitHub 授权）；已公开源码见 </span><a href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub project list ↗</a><span data-i18n data-en=".">。</span></p></div>
 </section>
 <section id="resume" class="resume-details"><div class="shell"><div class="section-head reveal"><div><div class="section-kicker">04 / Curriculum vitae</div>
-<h2>学术简历</h2></div>
-<p class="section-intro">教育与任职经历、教学课程、代表性成果和科研项目。</p></div><div class="detail-grid">
+<h2 data-i18n data-en="Curriculum vitae">学术简历</h2></div>
+<p class="section-intro" data-i18n data-en="Education and appointments, teaching, selected publications, and research projects.">教育与任职经历、教学课程、代表性成果和科研项目。</p></div><div class="detail-grid">
 <article class="detail-card reveal">
-<h3>教育经历</h3>
+<h3 data-i18n data-en="Education">教育经历</h3>
 <ul class="detail-list">
-<li><strong>2001—2004 · 北京大学中文系</strong><br>语言学及应用语言学专业，实验语音学方向，获博士学位。</li>
-<li><strong>1998—2001 · 北京广播学院（现中国传媒大学）</strong><br>播音主持艺术学院应用语言学系；语言学及应用语言学专业，获硕士学位。</li>
-<li><strong>1988—1992 · 河南大学中文系</strong><br>汉语言文学专业，获学士学位。</li>
+<li><strong data-i18n data-en="2001—2004 · Department of Chinese Language and Literature, Peking University">2001—2004 · 北京大学中文系</strong><br><span data-i18n data-en="Linguistics and Applied Linguistics, specializing in experimental phonetics; PhD.">语言学及应用语言学专业，实验语音学方向，获博士学位。</span></li>
+<li><strong data-i18n data-en="1998—2001 · Beijing Broadcasting Institute (now Communication University of China)">1998—2001 · 北京广播学院（现中国传媒大学）</strong><br><span data-i18n data-en="Department of Applied Linguistics, School of Broadcasting and Hosting Arts; MA in Linguistics and Applied Linguistics.">播音主持艺术学院应用语言学系；语言学及应用语言学专业，获硕士学位。</span></li>
+<li><strong data-i18n data-en="1988—1992 · Department of Chinese Language and Literature, Henan University">1988—1992 · 河南大学中文系</strong><br><span data-i18n data-en="Chinese Language and Literature; BA.">汉语言文学专业，获学士学位。</span></li>
 </ul>
 </article>
 <article class="detail-card reveal">
-<h3>工作经历</h3>
+<h3 data-i18n data-en="Academic appointments">工作经历</h3>
 <ul class="detail-list">
-<li><strong><span class="date-range">2018.12 <b>—</b> 至今</span> · 中国传媒大学人文学院 · 教授</strong></li>
-<li><strong><span class="date-range">2010.03 <b>—</b> 2012.08</span> · 贝尔格莱德孔子学院 · 中方院长</strong></li>
-<li><strong><span class="date-range">2007.07 <b>—</b> 2018.12</span> · 中国传媒大学对外汉语教育学院、人文学院 · 副教授</strong></li>
-<li><strong><span class="date-range">2007.05 <b>—</b> 2009.06</span> · 中国科学院心理研究所 · 博士后</strong></li>
-<li><strong><span class="date-range">2001.07 <b>—</b> 2007.06</span> · 中国传媒大学播音主持艺术学院 · 讲师、副教授</strong></li>
-<li><strong><span class="date-range">1992.07 <b>—</b> 1998.08</span> · 河南商丘师范学院 · 助教</strong></li>
+<li><strong><span class="date-range">2018.12 <b>—</b> <span data-i18n data-en="present">至今</span></span> · <span data-i18n data-en="School of Humanities, Communication University of China · Professor">中国传媒大学人文学院 · 教授</span></strong></li>
+<li><strong><span class="date-range">2010.03 <b>—</b> 2012.08</span> · <span data-i18n data-en="Confucius Institute in Belgrade · Chinese director">贝尔格莱德孔子学院 · 中方院长</span></strong></li>
+<li><strong><span class="date-range">2007.07 <b>—</b> 2018.12</span> · <span data-i18n data-en="School of Teaching Chinese as a Foreign Language and School of Humanities, Communication University of China · Associate Professor">中国传媒大学对外汉语教育学院、人文学院 · 副教授</span></strong></li>
+<li><strong><span class="date-range">2007.05 <b>—</b> 2009.06</span> · <span data-i18n data-en="Institute of Psychology, Chinese Academy of Sciences · Postdoctoral researcher">中国科学院心理研究所 · 博士后</span></strong></li>
+<li><strong><span class="date-range">2001.07 <b>—</b> 2007.06</span> · <span data-i18n data-en="School of Broadcasting and Hosting Arts, Communication University of China · Lecturer, Associate Professor">中国传媒大学播音主持艺术学院 · 讲师、副教授</span></strong></li>
+<li><strong><span class="date-range">1992.07 <b>—</b> 1998.08</span> · <span data-i18n data-en="Shangqiu Normal University · Assistant Professor">河南商丘师范学院 · 助教</span></strong></li>
 </ul>
 </article>
 <article class="detail-card reveal">
-<h3>教学与研究领域</h3>
-<p>实验语音学；互动语言学；言语韵律；汉语教学；艺术发声学。</p>
-<h3 style="margin-top:22px">主要讲授课程</h3>
-<p>汉语语音学（硕士生）；AI 语音教学与研究（实验语音学）（硕士生）；汉语韵律研究（硕士生）；语言学研究方法（硕士生）；AI 赋能的语言实证研究：理论与实践 （博士生）；传媒语言研究（本科生、硕士生）；普通话口语训练（本科生）；有声语言发声与表达艺术（本科公选课）；口语正音（留学生）；高级听说（留学生）。</p>
+<h3 data-i18n data-en="Teaching and research fields">教学与研究领域</h3>
+<p data-i18n data-en="Experimental phonetics; interactional linguistics; speech prosody; Chinese language teaching; voice performance.">实验语音学；互动语言学；言语韵律；汉语教学；艺术发声学。</p>
+<h3 style="margin-top:22px" data-i18n data-en="Courses taught">主要讲授课程</h3>
+<p data-i18n data-en="Chinese phonetics (MA); AI Chinese teaching and research (experimental phonetics) (MA); Chinese prosody research (MA); research methods in linguistics (MA); AI-empowered empirical research in language: theory and practice (PhD); media language studies (BA/MA); Putonghua speaking practice (BA); voice and expressive arts for broadcasting (undergraduate elective); Chinese pronunciation correction (international students); advanced listening and speaking (international students).">汉语语音学（硕士生）；AI 语音教学与研究（实验语音学）（硕士生）；汉语韵律研究（硕士生）；语言学研究方法（硕士生）；AI 赋能的语言实证研究：理论与实践 （博士生）；传媒语言研究（本科生、硕士生）；普通话口语训练（本科生）；有声语言发声与表达艺术（本科公选课）；口语正音（留学生）；高级听说（留学生）。</p>
 </article>
 <article class="detail-card reveal">
-<h3>专著、教材与学位论文</h3>
+<h3 data-i18n data-en="Monographs, textbook, and dissertation">专著、教材与学位论文</h3>
 <ul class="detail-list">
-<li>陈玉东（2017）．《汉语语篇的重音层级研究》，中国传媒大学出版社。</li>
-<li>陈玉东（2006）．《传媒有声语言实验研究》，中国传媒大学出版社。</li>
-<li>陈玉东主编（2010）．《趣味汉语语音课本》，世界图书出版社。</li>
-<li>陈玉东（2004）．传媒有声语言语段的构造与调节，北京大学博士学位论文。</li>
+<li data-i18n data-en="Chen Yudong (2017). Research on the Hierarchy of Stress in Chinese Discourse. Communication University of China Press.">陈玉东（2017）．《汉语语篇的重音层级研究》，中国传媒大学出版社。</li>
+<li data-i18n data-en="Chen Yudong (2006). Experimental Research on Broadcast Voice. Communication University of China Press.">陈玉东（2006）．《传媒有声语言实验研究》，中国传媒大学出版社。</li>
+<li data-i18n data-en="Chen Yudong, ed. (2010). A Fun Chinese Phonetics Textbook. World Publishing Corporation.">陈玉东主编（2010）．《趣味汉语语音课本》，世界图书出版社。</li>
+<li data-i18n data-en="Chen Yudong (2004). The Construction and Regulation of Prosodic Phrases in Broadcast Language. PhD dissertation, Peking University.">陈玉东（2004）．传媒有声语言语段的构造与调节，北京大学博士学位论文。</li>
 </ul>
 </article>
 <article class="detail-card wide reveal">
-<h3>代表性论文</h3>
+<h3 data-i18n data-en="Selected publications">代表性论文</h3>
 <ul class="paper-list">
 <li>陈玉东（2026）．法庭审理中陈述、宣告和宣判的韵律表达，《汉语学报》第3期。</li>
 <li>陈玉东（2024）．汉语会话中叹词的语调模式和应答功能——互动视角下的听感实验研究，《语言科学》第3期。</li>
@@ -358,7 +365,7 @@
 <li>张欣阳、陈玉东（2022）．互动视角下陈述疑问句的韵律特征初探，《中国语音学报》第1期。</li>
 </ul>
 <details class="detail-expand">
-<summary>查看更多</summary>
+<summary data-i18n data-en="Show more">查看更多</summary>
 <ul class="paper-list paper-extra">
 <li>陈玉东、段汝丽（2020）．评书流水句的韵律表达，《当代修辞学》第1期。</li>
 <li>陈玉东、岳炎炎、崔哲、王博晓、孙鑫（2020）．反问句的韵律表达及其互动特征，《互动语言学与汉语研究（第三辑）》，北京语言大学出版社，286—317 页。<a class="citation-link" href="https://ncpssd.org/journal/details?gch=11119X&amp;langType=1&amp;num=1&amp;years=2020" target="_blank" rel="noreferrer">文献记录 ↗</a></li>
@@ -378,14 +385,14 @@
 </details>
 </article>
 <article class="detail-card wide reveal">
-<h3>科研项目</h3>
+<h3 data-i18n data-en="Research projects">科研项目</h3>
 <ul class="detail-list">
 <li>国家社科基金一般项目《互动视域下语体驱动的汉语韵律表达研究》（24BYY039），项目负责人，2024.10—2027.12。在研。</li>
 <li>国家社科重大项目子项目《自然口语对话中的韵律互动研究》（20ZD295），子项目负责人，2020.12—2025.12。结项。</li>
 <li>国家社会科学基金重点项目《汉语语用标记形成机制的多视角研究》（14AYY015），主要参与人，2014.10—2018.12。完成。</li>
 </ul>
 <details class="detail-expand">
-<summary>查看更多</summary>
+<summary data-i18n data-en="Show more">查看更多</summary>
 <ul class="detail-list">
 <li>国家自然科学基金项目《面向双语教学的新疆少数民族多层次普通话语音库建设及声学分析》（NSFC61362037），主要参与人，2014.10—2017.12.10。完成。</li>
 <li>国家自然科学基金项目《汉语语篇中语句焦点和焦点-重音投射》（项目号60775026），参与人，2007.10—2012.12。完成。</li>
@@ -397,18 +404,61 @@
 </article></div></div>
 </section>
     <section id="lab" class="shell"><div class="section-head reveal"><div><div class="section-kicker">05 / Lab index</div>
-<h2>实验室模块介绍</h2></div>
-<p class="section-intro">Speech Lab 涵盖发音机制、声学分析、韵律和音乐听觉。项目存放于 GitHub 私有仓库，尚未公开；以下为模块介绍，使用方式可联系咨询。</p></div><div class="lab-grid"><div class="lab-item reveal"><b>语音基础</b><span>声波 · 频谱 · 语图 · 清浊 · 气流</span></div><div class="lab-item reveal"><b>发音与共鸣</b><span>元音 · 声母 · 韵母 · 口腔 / 胸腔 / 头腔共鸣</span></div><div class="lab-item reveal"><b>韵律与声调</b><span>声调 · 语调 · 重音 · F0 曲线编辑 · TextGrid</span></div><div class="lab-item reveal"><b>声音与音乐</b><span>纯音与复合音 · 谐波 · 律制 · 中国五声调式</span></div></div>
+<h2 data-i18n data-en="Lab modules">实验室模块介绍</h2></div>
+<p class="section-intro" data-i18n data-en="Speech Lab covers articulatory mechanisms, acoustic analysis, prosody, and musical listening. The project is hosted in a private GitHub repository and is not yet public; contact me for details.">Speech Lab 涵盖发音机制、声学分析、韵律和音乐听觉。项目存放于 GitHub 私有仓库，尚未公开；以下为模块介绍，使用方式可联系咨询。</p></div><div class="lab-grid"><div class="lab-item reveal"><b data-i18n data-en="Speech fundamentals">语音基础</b><span data-i18n data-en="Sound waves · spectrum · spectrogram · voicing · airflow">声波 · 频谱 · 语图 · 清浊 · 气流</span></div><div class="lab-item reveal"><b data-i18n data-en="Articulation and resonance">发音与共鸣</b><span data-i18n data-en="Vowels · initials · finals · oral / chest / head resonance">元音 · 声母 · 韵母 · 口腔 / 胸腔 / 头腔共鸣</span></div><div class="lab-item reveal"><b data-i18n data-en="Prosody and tones">韵律与声调</b><span data-i18n data-en="Tones · intonation · stress · F0 curve editing · TextGrid">声调 · 语调 · 重音 · F0 曲线编辑 · TextGrid</span></div><div class="lab-item reveal"><b data-i18n data-en="Voice and music">声音与音乐</b><span data-i18n data-en="Pure and complex tones · harmonics · tuning systems · Chinese pentatonic modes">纯音与复合音 · 谐波 · 律制 · 中国五声调式</span></div></div>
 </section>
     <section id="contact" class="shell"><div class="download reveal"><div>
-<h2>联系与访问咨询</h2>
-<p>欢迎就语音教学、声学分析、语料研究及工具使用交流。咨询平台访问时，请注明平台名称与用途。</p></div><div class="hero-actions"><a class="button primary" href="mailto:chenyd@cuc.edu.cn">发送邮件 ↗</a><a class="contact-address" href="mailto:chenyd@cuc.edu.cn">chenyd@cuc.edu.cn</a></div></div>
+<h2 data-i18n data-en="Contact and access">联系与访问咨询</h2>
+<p data-i18n data-en="I welcome conversations about speech teaching, acoustic analysis, corpus research, and tool use. When requesting platform access, please specify the platform and intended use.">欢迎就语音教学、声学分析、语料研究及工具使用交流。咨询平台访问时，请注明平台名称与用途。</p></div><div class="hero-actions"><a class="button primary" href="mailto:chenyd@cuc.edu.cn" data-i18n data-en="Send email ↗">发送邮件 ↗</a><a class="contact-address" href="mailto:chenyd@cuc.edu.cn">chenyd@cuc.edu.cn</a></div></div>
 </section>
   </main>
-<footer><div class="shell footer-row"><span>© 2026 陈玉东 / SoundSpace</span><div class="footer-links"><a href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:chenyd@cuc.edu.cn">Email</a><a href="#top">返回顶部 ↑</a></div></div>
+<footer><div class="shell footer-row"><span>© 2026 陈玉东 / SoundSpace</span><div class="footer-links"><a href="https://github.com/myddgithub" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:chenyd@cuc.edu.cn">Email</a><a href="#top" data-i18n data-en="Back to top ↑">返回顶部 ↑</a></div></div>
 </footer>
 
   <script>
+    const languageButtons = [...document.querySelectorAll('[data-language]')];
+    const translatableNodes = [...document.querySelectorAll('[data-i18n]')];
+    const languageMeta = {
+      zh: {
+        title: '陈玉东 · Speech / AI / Corpus',
+        description: '陈玉东（Chen Yudong）的个人学术主页：实验语音学、普通话语音教学、AI 与多模态语料研究。',
+        ogTitle: '陈玉东 · 语音、AI 与语料研究',
+        ogDescription: '中国传媒大学陈玉东的学术简历、研究平台与语音研究工具.'
+      },
+      en: {
+        title: 'Chen Yudong · Speech / AI / Corpus',
+        description: 'The academic homepage of Chen Yudong: experimental phonetics, Chinese speech teaching, AI, and multimodal corpus research.',
+        ogTitle: 'Chen Yudong · Speech, AI, and Corpus Research',
+        ogDescription: 'Academic profile, research platforms, and speech research tools by Chen Yudong at Communication University of China.'
+      }
+    };
+    translatableNodes.forEach(node => { node.dataset.zh = node.textContent; });
+    const updateMeta = (selector, value) => {
+      const element = document.querySelector(selector);
+      if (element) element.setAttribute('content', value);
+    };
+    const applyLanguage = language => {
+      const lang = language === 'en' ? 'en' : 'zh';
+      const english = lang === 'en';
+      translatableNodes.forEach(node => {
+        node.textContent = english ? node.dataset.en : node.dataset.zh;
+      });
+      document.documentElement.lang = english ? 'en' : 'zh-CN';
+      document.title = languageMeta[lang].title;
+      updateMeta('meta[name="description"]', languageMeta[lang].description);
+      updateMeta('meta[property="og:title"]', languageMeta[lang].ogTitle);
+      updateMeta('meta[property="og:description"]', languageMeta[lang].ogDescription);
+      document.querySelector('img[alt]')?.setAttribute('alt', english ? 'Portrait of Chen Yudong' : '陈玉东照片');
+      document.querySelector('.nav')?.setAttribute('aria-label', english ? 'Primary navigation' : '主导航');
+      document.querySelector('.language-switch')?.setAttribute('aria-label', english ? 'Language' : '语言 / Language');
+      languageButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === lang)));
+      try { localStorage.setItem('site-language', lang); } catch (error) { /* Private browsing may disable storage. */ }
+    };
+    languageButtons.forEach(button => button.addEventListener('click', () => applyLanguage(button.dataset.language)));
+    let savedLanguage = 'zh';
+    try { savedLanguage = localStorage.getItem('site-language') || 'zh'; } catch (error) { /* Use Chinese by default. */ }
+    applyLanguage(savedLanguage);
+
     const mobileMenu = document.querySelector('.mobile-menu');
     const menuSummary = mobileMenu.querySelector('summary');
     mobileMenu.querySelectorAll('a').forEach(link => {
