@@ -49,9 +49,15 @@ python -m http.server 8080 --bind 127.0.0.1
 
 ## 部署与维护
 
-现有站点使用 Cloudflare Pages 的 Git 集成。将审核后的修改推送到本仓库
-`main` 分支会触发部署；在提交检查中确认 “Cloudflare Pages” 成功后，
-再核对 [正式站点](https://soundspace.club/) 的实际内容。
+WordPress 动态站已部署在搬瓦工，预览：
+
+- https://phon.soundspace.club/
+- https://www.soundspace.club/
+
+后台 `/wp-admin/`。外观主题 `SoundSpace Academic` 沿用本仓库的 `index.html`。
+apex `https://soundspace.club/` 在把 Cloudflare Pages 自定义域名改为指向 VPS 之前，仍是 Pages 静态站。
+
+本仓库仍可作为主题源：改 HTML 后需同步到 VPS 主题目录 `/var/www/html/wp-content/themes/soundspace/`。日常改字、发文、统计在 WordPress 后台完成，不必每次 Git 部署。
 
 更新内容时：
 
