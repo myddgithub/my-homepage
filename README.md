@@ -23,7 +23,7 @@ my-homepage/
 
 | 项目 | 入口与访问条件 |
 | --- | --- |
-| AI 中文语音教学 | Google Cloud 提供服务：[ai.soundspace.club](https://ai.soundspace.club/)，需使用管理员分发的账号登录 |
+| AI 中文语音教学 | NAS / CPU：[ai.soundspace.club](https://ai.soundspace.club/)；本机 / GPU：[ai-gpu.soundspace.club](https://ai-gpu.soundspace.club/)；需使用管理员分发的账号登录 |
 | Json2TG | [json2tg.soundspace.club](https://json2tg.soundspace.club/)，需访问凭据 |
 | ToPics 韵律画图 | [topics.soundspace.club](https://topics.soundspace.club/)，需访问凭据 |
 | 音视频转换与剪辑 | [公开源码](https://github.com/myddgithub/media-workbench-web)，支持本地部署；NAS 服务通过获授权的 Tailscale 通道访问，连接方式请联系咨询 |

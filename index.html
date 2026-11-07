@@ -128,6 +128,7 @@
     .tag { border:1px solid var(--line); border-radius:999px; padding:3px 9px; color:#b4d4d9; font-size:12px; }
     .project .access-note { font-size:13px; margin-top:16px; }
     .access-note a,.tool-status a,.tool-note a,.reference-note a,.citation-link { color:var(--cyan); text-decoration:underline; text-underline-offset:4px; }
+    .project-links { display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:4px; }
     .project-link { display:inline-flex; align-items:center; min-height:44px; margin-top:12px; color:var(--cyan); font-size:15px; font-weight:700; }
     .tool-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
     .tool-card { display:flex; flex-direction:column; padding:23px; border:1px solid var(--line); background:var(--panel); }
@@ -289,7 +290,7 @@
 <article class="project reveal"><div class="project-top"><span>02 / TEACHING</span><span class="project-icon">◌</span></div>
 <h3>AI Chinese Teach<small data-i18n data-en="AI Chinese speech teaching system">AI 中文语音教学系统</small></h3>
 <p data-i18n data-en="A speech teaching platform for students, teachers, and administrators, with assignments, model audio, recording/upload, phoneme and tone scoring, fluency feedback, batch assessment, TextGrid editing, and ToPics plotting.">面向学生、教师与管理员的语音教学平台：任务、示范音、录音 / 上传、音素与声调评分、流利度反馈、批量评测，以及 TextGrid 编辑与 ToPics 绘图。</p><div class="tags"><span class="tag">ASR</span><span class="tag" data-i18n data-en="Speech scoring">语音评分</span><span class="tag">FastAPI</span></div>
-<p class="access-note"><span data-i18n data-en="Google Cloud service · Administrator-issued account required; ">Google Cloud 云服务 · 需使用管理员分发的账号登录，</span><a href="#contact" data-i18n data-en="ask about access">咨询账号申请</a>。</p><a class="project-link" href="https://ai.soundspace.club/" target="_blank" rel="noreferrer" data-i18n data-en="Open teaching platform ↗">打开教学平台 ↗</a>
+<p class="access-note"><span data-i18n data-en="NAS CPU and local GPU deployments · Administrator-issued account required; ">NAS / CPU 与本机 / GPU 两套入口 · 需使用管理员分发的账号登录，</span><a href="#contact" data-i18n data-en="ask about access">咨询账号申请</a>。</p><div class="project-links"><a class="project-link" href="https://ai.soundspace.club/" target="_blank" rel="noreferrer" data-i18n data-en="Open teaching platform (NAS / CPU) ↗">打开教学平台（NAS / CPU） ↗</a><a class="project-link" href="https://ai-gpu.soundspace.club/" target="_blank" rel="noreferrer" data-i18n data-en="Open teaching platform (local / GPU) ↗">打开教学平台（本机 / GPU） ↗</a></div>
 </article>
 <article class="project reveal"><div class="project-top"><span>03 / CORPUS</span><span class="project-icon">⌁</span></div>
 <h3>SoundSpace<small data-i18n data-en="Multimodal corpus and prosody research platform">多模态语料与韵律研究平台</small></h3>
